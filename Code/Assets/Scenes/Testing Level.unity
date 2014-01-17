@@ -85,6 +85,7 @@ GameObject:
   - 212: {fileID: 1228708206}
   - 50: {fileID: 1228708208}
   - 114: {fileID: 1228708209}
+  - 61: {fileID: 1228708211}
   m_Layer: 0
   m_Name: char_enemy_alienShip
   m_TagString: Untagged
@@ -135,8 +136,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
+  m_GravityScale: 1
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -152,6 +153,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de33038e1b4154298c5d7f8c49fae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftKey: 97
+  rightKey: 100
+  jump: 32
+  speed: 10
+  jumpSpeed: 20
+--- !u!61 &1228708211
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228708205}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 5.5999999, y: 4.80000019}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1467138488
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +179,7 @@ GameObject:
   - 4: {fileID: 1467138492}
   - 33: {fileID: 1467138491}
   - 23: {fileID: 1467138489}
-  - 50: {fileID: 1467138490}
+  - 61: {fileID: 1467138490}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -191,21 +208,17 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!50 &1467138490
-Rigidbody2D:
+--- !u!61 &1467138490
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467138488}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: .99999994}
+  m_Center: {x: 0, y: 0}
 --- !u!33 &1467138491
 MeshFilter:
   m_ObjectHideFlags: 0

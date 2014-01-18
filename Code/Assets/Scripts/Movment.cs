@@ -13,7 +13,6 @@ public class Movment : MonoBehaviour {
 	void Start () {
 		isGrounded = true;
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		if(isGrounded)

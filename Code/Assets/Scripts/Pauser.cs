@@ -10,10 +10,11 @@ public class Pauser : MonoBehaviour {
 		{
 			paused = !paused;
 		}
-
-		if(paused)
+		if(paused) {
 			Time.timeScale = 0;
+		}
 		else
 			Time.timeScale = 1;
 	}
+
 }

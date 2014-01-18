@@ -3,46 +3,30 @@ using System.Collections;
 
 public class Level1Uni1 : MonoBehaviour {
 
-	bool hasKey1;
-	private bool paused = false;
-	public GameObject door1;
-	public GUIText numOfKeys;
-	float time = 10.0f;
+	Inventory i;
+	public int numOfKeys;
+	
 	// Use this for initialization
 	void Start () {
-		hasKey1 = false;
-		//new Vector3(50.1f,35.1f,0)
-		numOfKeys.transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.1f,0.1f,0)); 
-		numOfKeys.text = "testing";
-
- 	}
+		i = new Inventory(numOfKeys);
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		time -= Time.deltaTime;
-		if( hasKey1 && door1.GetComponent<DoorScript>().CheckCollider())
-		{
-			Debug.Log ("You Opened the Door!! Grats Bro!");
-		}
-		if(time<0)
-		{
-			time = 10.0f;
-		}
 	}
-	
 
-	public void ChangeKeyValue()
+	public void AddKey(int keyNum)
 	{
-		hasKey1 = true;
+		i.AddKey(keyNum);
+	}
+
+	void CheckDoor(int doorNum)
+	{
+		if(i.CheckIfHaveKey(doorNum))
+		{
+			Debug.Log ("OpenedDoor");
+		}
 	}
 
 
-	public void OnGUI () {
-		GUIStyle style = new GUIStyle ();
-		style.fontSize = 20;
-		GUI.Label (new Rect (Screen.width - 100, 0, 200, 50), time.ToString(),style );
-		GUI.Label (new Rect (Screen.width - 200, 50, 200, 50), "Number of Keys", style);
-
-
-	}
 }

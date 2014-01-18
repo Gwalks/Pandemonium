@@ -3,26 +3,30 @@ using System.Collections;
 
 public class Level1Uni1 : MonoBehaviour {
 
-	bool hasKey1;
-	public GameObject door1;
-
-
+	Inventory i;
+	public int numOfKeys;
+	
 	// Use this for initialization
 	void Start () {
-		hasKey1 = false;
+		i = new Inventory(numOfKeys);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if( hasKey1 && door1.GetComponent<DoorScript>().CheckCollider())
+	}
+
+	public void AddKey(int keyNum)
+	{
+		i.AddKey(keyNum);
+	}
+
+	void CheckDoor(int doorNum)
+	{
+		if(i.CheckIfHaveKey(doorNum))
 		{
-			Debug.Log ("You Opened the Door!! Grats Bro!");
+			Debug.Log ("OpenedDoor");
 		}
 	}
-	
 
-	public void ChangeKeyValue()
-	{
-		hasKey1 = true;
-	}
+
 }

@@ -27,6 +27,7 @@ public class Interaction : MonoBehaviour {
 		if (Input.GetKey(KeyCode.E) && col.tag == "Player")
 		{
 			level.GetComponent<Level1Uni1>().ChangeKeyValue();
+			gameObject.SetActive(false);
 			Debug.Log ("You picked that shit up!");
 		}
 	}

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 410482897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d0d2ec9ff27af84ab7faee2448033c5, type: 3}
+  m_Script: {fileID: 11500000, guid: aeee3f9544dd13d4097c0f699675f28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   door1: {fileID: 807270769}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 807270769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf467b8b6b707e54fa10e4042198b2d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ac1c66d159a4a34d8028259afaa29b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1228708205
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1228708205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78de33038e1b4154298c5d7f8c49fae9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec1494a1ad0cb84586ee23c772b0bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftKey: 97
@@ -288,7 +288,7 @@ MonoBehaviour:
   jump: 32
   speed: 10
   jumpSpeed: 10
-  level1: {fileID: 410482898}
+  level1: {fileID: 0}
 --- !u!1 &1242994654
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1242994654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdb5e0816fc6494438801ec627e1b14b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0547a934b0d5a104aa7ce509656440fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 410482897}

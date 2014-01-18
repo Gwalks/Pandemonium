@@ -9,9 +9,14 @@ public class Movment : MonoBehaviour {
 	public KeyCode jump;
 	public float speed = 10;
 	public int jumpSpeed = 10;
+	Animator anim;
 	bool isGrounded;
 
 	public Level1Uni1 level1;
+
+	void Awake() {
+		anim = GetComponent<Animator>();
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +33,8 @@ public class Movment : MonoBehaviour {
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*-1;
 				rigidbody2D.velocity = temp;
+				//anim.SetTrigger("MainCharacter");
+
 			}
 			if (Input.GetKey(rightKey)) 
 			{
@@ -35,6 +42,7 @@ public class Movment : MonoBehaviour {
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed;
 				rigidbody2D.velocity = temp;
+				//anim.SetTrigger("MainCharacter");
 			}
 			if(Input.GetKeyDown(jump))
 			{

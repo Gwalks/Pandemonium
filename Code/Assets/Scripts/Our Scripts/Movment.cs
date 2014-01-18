@@ -21,6 +21,9 @@ public class Movment : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isGrounded = true;
+		leftKey = KeyCode.A;
+		rightKey = KeyCode.D;
+		jump = KeyCode.Space;
 	}
 	
 	// Update is called once per frame

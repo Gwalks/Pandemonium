@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Interaction : MonoBehaviour {
 
+public class Key : MonoBehaviour {
+	
+	public int keyNum;
 	public GameObject level;
 
-	void OnCollisionStay2D(Collision2D other)
+	public Key(int num)
 	{
-		if(Input.GetKey(KeyCode.E) && other.collider.tag == "Player")
-		{
-			renderer.material.color = Color.red;
-		}
+		keyNum = num;
 	}
 
-	void OnCollisionExit(Collision Other)
+	public int GetKeyNum()
 	{
+		return keyNum;
 	}
 
 	void OnTriggerStay2D(Collider2D col ) 
@@ -22,7 +22,7 @@ public class Interaction : MonoBehaviour {
 		if (Input.GetKey(KeyCode.E) && col.tag == "Player")
 		{
 			level.SendMessage("AddKey", gameObject.GetComponent<Key>().GetKeyNum());
+			gameObject.active = false;
 		}
 	}
-
 }

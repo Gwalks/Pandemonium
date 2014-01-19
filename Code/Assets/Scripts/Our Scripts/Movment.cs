@@ -10,7 +10,6 @@ public class Movment : MonoBehaviour {
 	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
-	//public bool facingRight = true;
 	bool isGrounded;
 	//Animator anim;
 	// Use this for initialization

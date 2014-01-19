@@ -31,7 +31,7 @@ public class TextBox : MonoBehaviour {
 		Debug.Log(textIndex);
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerStay2D(Collider2D other) {
 		//Debug.Log ("Bacon");
 		if (Input.GetKeyUp(KeyCode.E) && other.gameObject.tag == "Player") {
 			showText = true;

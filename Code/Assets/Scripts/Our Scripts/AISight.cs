@@ -3,10 +3,11 @@ using System.Collections;
 
 public class AISight : MonoBehaviour {
 
-	public GameObject bullet;
+	public Rigidbody2D bullet;
 	Vector2 spawnPlace;
 	bool seenPlayer;
 
+	public float bulletSpeed;
 
 	void Start()
 	{
@@ -16,11 +17,16 @@ public class AISight : MonoBehaviour {
 	void Update()
 	{
 		spawnPlace = this.gameObject.transform.position;
+
 	}
 
 	void SpawnBullet()
 	{
-		Instantiate(bullet, spawnPlace, Quaternion.identity);
+		Rigidbody2D clone = (Rigidbody2D) Instantiate(bullet, transform.position, Quaternion.identity);
+		clone.velocity = Vector2.right * bulletSpeed * (int)transform.GetComponent<AIMovement>().GetDirection();
+
+		Debug.Log(clone.velocity + ": " + (int)transform.GetComponent<AIMovement>().GetDirection() );
+
 	}
 
 	void OnTriggerEnter2D( Collider2D col)

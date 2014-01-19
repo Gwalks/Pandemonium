@@ -20,7 +20,6 @@ public class Door : MonoBehaviour {
 	{
 		if( col.gameObject.tag == "Player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
 		{
-
 			gameObject.active = false; 
 		}
 	}

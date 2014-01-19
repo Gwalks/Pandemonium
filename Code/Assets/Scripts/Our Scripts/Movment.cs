@@ -4,15 +4,13 @@ using System.Collections;
 
 public class Movment : MonoBehaviour {
 
-	public KeyCode leftKey;
-	public KeyCode rightKey;
-	public KeyCode jump;
+	KeyCode leftKey;
+	KeyCode rightKey;
+	KeyCode jump;
 	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-
-	public Level1Uni1 level1;
 
 	// Use this for initialization
 	void Start () {

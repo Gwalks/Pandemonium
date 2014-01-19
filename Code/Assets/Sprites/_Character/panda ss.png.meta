@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 49b1210a21db4eb4f9e4c10e409ed9f5
+guid: 661e432a8a718dd499987633d2eb3c31
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -20,17 +20,17 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,51 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Left
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 629
+        width: 178
+        height: 238
+      alignment: 3
+      pivot: {x: 1, y: 1}
+    - name: Right
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 578
+        width: 112
+        height: 252
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 121
+        width: 167
+        height: 201
+      alignment: 9
+      pivot: {x: .5, y: 1}
+    - name: RightLeg
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 149
+        width: 157
+        height: 238
+      alignment: 9
+      pivot: {x: .5, y: 1}
+    - name: Body
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 318
+        width: 429
+        height: 682
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

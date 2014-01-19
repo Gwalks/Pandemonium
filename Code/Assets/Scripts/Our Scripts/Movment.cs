@@ -7,14 +7,16 @@ public class Movment : MonoBehaviour {
 	public KeyCode leftKey;
 	public KeyCode rightKey;
 	public KeyCode jump;
+	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-
+	Animator anim;
 	public Level1Uni1 level1;
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 		isGrounded = true;
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
@@ -23,10 +25,13 @@ public class Movment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		anim.SetInteger("WalkTransition",0);
+		float h = Input.GetAxis("Horizontal");
 		if(isGrounded)
 		{
 			if (Input.GetKey(leftKey)) 
 			{
+				anim.SetInteger("WalkTransition",1);
 				//rigidbody2D.velocity.x = speed*-1;
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*-1;
@@ -34,6 +39,7 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKey(rightKey)) 
 			{
+				anim.SetInteger("WalkTransition",1);
 				//rigidbody2D.velocity.x = speed;
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed;
@@ -52,7 +58,12 @@ public class Movment : MonoBehaviour {
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
 			}
-
+			if (h > 0 && !facingRight) {
+				Flip();
+			}
+			else if (h < 0 && facingRight) {
+				Flip();
+			}
 		}
 
 		if(rigidbody2D.velocity.y ==0)
@@ -62,4 +73,11 @@ public class Movment : MonoBehaviour {
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}
 
+	void Flip() {
+		facingRight = !facingRight;
+
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 }

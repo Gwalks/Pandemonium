@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
 	Vector2 temp;
 	GameObject level;
 
+
 	// Use this for initialization
 	void Start () {
 		temp = rigidbody2D.velocity;
@@ -26,7 +27,7 @@ public class Bullet : MonoBehaviour {
 		if(col.tag == "Player")
 		{
 			Debug.Log ("You've been hit!");
-			level.SendMessage("EndGame");
+			level.SendMessage("LoseGame");
 		}
 	}
 }

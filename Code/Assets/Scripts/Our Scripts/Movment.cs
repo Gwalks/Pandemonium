@@ -7,6 +7,7 @@ public class Movment : MonoBehaviour {
 	public KeyCode leftKey;
 	public KeyCode rightKey;
 	public KeyCode jump;
+	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
@@ -23,6 +24,7 @@ public class Movment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		float h = Input.GetAxis("Horizontal");
 		if(isGrounded)
 		{
 			if (Input.GetKey(leftKey)) 
@@ -52,7 +54,12 @@ public class Movment : MonoBehaviour {
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
 			}
-
+			if (h > 0 && !facingRight) {
+				Flip();
+			}
+			else if (h < 0 && facingRight) {
+				Flip();
+			}
 		}
 
 		if(rigidbody2D.velocity.y ==0)
@@ -62,4 +69,11 @@ public class Movment : MonoBehaviour {
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}
 
+	void Flip() {
+		facingRight = !facingRight;
+
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 }

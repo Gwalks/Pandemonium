@@ -10,6 +10,7 @@ public class Movment : MonoBehaviour {
 	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
+	public bool facingRight = true;
 	bool isGrounded;
 	//Animator anim;
 	// Use this for initialization
@@ -45,6 +46,7 @@ public class Movment : MonoBehaviour {
 			}
 			if(Input.GetKeyDown(jump))
 			{
+				//anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.y = jumpSpeed;
 				rigidbody2D.velocity = temp;
@@ -52,6 +54,7 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 			{
+				//anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
@@ -62,20 +65,33 @@ public class Movment : MonoBehaviour {
 			else if (h < 0 && facingRight) {
 				Flip();
 			}
+			if(h > 0 && !facingRight)
+				// ... flip the player.
+				Flip();
+			// Otherwise if the input is moving the player left and the player is facing right...
+			else if(h < 0 && facingRight)
+				// ... flip the player.
+				Flip();
+
 		}
 
 		if(rigidbody2D.velocity.y ==0)
 		{
 			isGrounded = true;
 		}
+		else{
+			//anim.SetInteger("WalkTransition",2);
+		}
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}
 
 	void Flip() {
 		facingRight = !facingRight;
-
+		
+		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
 }

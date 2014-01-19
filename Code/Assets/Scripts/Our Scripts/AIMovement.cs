@@ -8,6 +8,7 @@ public class AIMovement : MonoBehaviour {
 	
 	public float timeToPace;
 	public float timeToPause;
+	public bool facingRight = true;
 	bool pause;
 	float paceTimer;
 	float pauseTimer;
@@ -30,6 +31,8 @@ public class AIMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//float h = Input.GetAxis("Horizontal");
+
 		if(!pause)
 		{
 			paceTimer -= Time.deltaTime;
@@ -52,8 +55,20 @@ public class AIMovement : MonoBehaviour {
 			pauseTimer = timeToPause;
 			pause = false;
 		}
+
+		//if (p == PacingDirection.left && !facingRight)
+		//	Flip();
+		//else if (p == PacingDirection.right && facingRight)
+		//	Flip();
 	}
-	
+
+	void Flip() {
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
 	void ChangeDirection()
 	{
 		switch(p)
@@ -80,5 +95,13 @@ public class AIMovement : MonoBehaviour {
 		temp = rigidbody2D.velocity;
 		temp.x = (float)PacingDirection.center * pacingSpeed;
 		rigidbody2D.velocity = temp;
+		
+		Flip();
+
+	}
+
+	public int GetDirection()
+	{
+		return (int)p;
 	}
 }

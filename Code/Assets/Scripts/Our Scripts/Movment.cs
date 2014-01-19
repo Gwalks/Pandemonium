@@ -4,18 +4,18 @@ using System.Collections;
 
 public class Movment : MonoBehaviour {
 
-	public KeyCode leftKey;
-	public KeyCode rightKey;
-	public KeyCode jump;
+	KeyCode leftKey;
+	KeyCode rightKey;
+	KeyCode jump;
+	public bool facingRight = true;
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	public bool facingRight = true;
 	bool isGrounded;
-
-	public Level1Uni1 level1;
-
+	//Animator anim;
 	// Use this for initialization
 	void Start () {
+		//anim = GetComponent<Animator>();
 		isGrounded = true;
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
@@ -24,11 +24,13 @@ public class Movment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
 		if(isGrounded)
 		{
 			if (Input.GetKey(leftKey)) 
 			{
+				//anim.SetInteger("WalkTransition",1);
 				//rigidbody2D.velocity.x = speed*-1;
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*-1;
@@ -36,6 +38,7 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKey(rightKey)) 
 			{
+				//anim.SetInteger("WalkTransition",1);
 				//rigidbody2D.velocity.x = speed;
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed;
@@ -43,6 +46,7 @@ public class Movment : MonoBehaviour {
 			}
 			if(Input.GetKeyDown(jump))
 			{
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.y = jumpSpeed;
 				rigidbody2D.velocity = temp;
@@ -50,11 +54,17 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 			{
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
 			}
-
+			if (h > 0 && !facingRight) {
+				Flip();
+			}
+			else if (h < 0 && facingRight) {
+				Flip();
+			}
 			if(h > 0 && !facingRight)
 				// ... flip the player.
 				Flip();
@@ -68,6 +78,9 @@ public class Movment : MonoBehaviour {
 		if(rigidbody2D.velocity.y ==0)
 		{
 			isGrounded = true;
+		}
+		else{
+			anim.SetInteger("WalkTransition",2);
 		}
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}

@@ -18,9 +18,8 @@ public class Door : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if( col.gameObject.name == "player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
+		if( col.gameObject.tag == "Player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
 		{
-
 			gameObject.active = false; 
 		}
 	}

@@ -19,7 +19,7 @@ public class Key : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player")
+		if (Input.GetKeyDown(KeyCode.E) && col.gameObject.tag == "Player")
 		{
 			level.SendMessage("AddKey", gameObject.GetComponent<Key>().GetKeyNum());
 			gameObject.active = false;

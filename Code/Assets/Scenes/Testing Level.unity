@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfKeys: 2
+  levelTime: 10
 --- !u!1 &494380199
 GameObject:
   m_ObjectHideFlags: 0

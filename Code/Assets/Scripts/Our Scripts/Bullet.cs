@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour {
 		if(col.tag == "Player")
 		{
 			Debug.Log ("You've been hit!");
-			level.SendMessage("EndGame");
+			level.SendMessage("LoseGame");
 		}
 	}
 }

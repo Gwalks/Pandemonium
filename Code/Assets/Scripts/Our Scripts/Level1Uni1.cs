@@ -5,7 +5,10 @@ public class Level1Uni1 : MonoBehaviour {
 
 	Inventory i;
 	public int numOfKeys;
+	public string levelName;
 	public float levelTime;
+
+	bool pauseTimer = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -14,7 +17,8 @@ public class Level1Uni1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		levelTime -= Time.deltaTime;
+		if(!pauseTimer)
+			levelTime -= Time.deltaTime;
 		if(levelTime <= 0)
 		{
 			ChangeLevel ();
@@ -24,7 +28,7 @@ public class Level1Uni1 : MonoBehaviour {
 	void OnGUI() {
 		GUIStyle timeStyle = new GUIStyle();
 		timeStyle.fontSize = 20;
-		GUI.Label(new Rect(Screen.width - 100,0,50,25),"Time",timeStyle);
+		GUI.Label(new Rect(Screen.width - 100,0,50,25),"Time: " + (int)levelTime,timeStyle);
 	}
 	public void AddKey(int keyNum)
 	{
@@ -50,7 +54,17 @@ public class Level1Uni1 : MonoBehaviour {
 	void ChangeLevel()
 	{
 		Debug.Log("Change Level");
-		Application.LoadLevel("Level1Dim2");
+		Application.LoadLevel(levelName);
+	}
+
+	public void PauseTimer()
+	{
+		pauseTimer = true;
+	}
+
+	public void UnPauseTimer()
+	{
+		pauseTimer = false;
 	}
 
 }

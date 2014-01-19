@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\Our Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Level1Uni1.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Movment.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\PlatformMove.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupSpawner.cs" />

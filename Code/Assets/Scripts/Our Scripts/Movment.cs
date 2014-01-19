@@ -45,6 +45,7 @@ public class Movment : MonoBehaviour {
 			}
 			if(Input.GetKeyDown(jump))
 			{
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.y = jumpSpeed;
 				rigidbody2D.velocity = temp;
@@ -52,6 +53,7 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 			{
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
@@ -67,6 +69,9 @@ public class Movment : MonoBehaviour {
 		if(rigidbody2D.velocity.y ==0)
 		{
 			isGrounded = true;
+		}
+		else{
+			anim.SetInteger("WalkTransition",2);
 		}
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}

@@ -9,6 +9,7 @@ public class Movment : MonoBehaviour {
 	public KeyCode jump;
 	public float speed = 10;
 	public int jumpSpeed = 10;
+	public bool facingRight = true;
 	bool isGrounded;
 
 	public Level1Uni1 level1;
@@ -23,6 +24,7 @@ public class Movment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		float h = Input.GetAxis("Horizontal");
 		if(isGrounded)
 		{
 			if (Input.GetKey(leftKey)) 
@@ -53,6 +55,14 @@ public class Movment : MonoBehaviour {
 				rigidbody2D.velocity = temp;
 			}
 
+			if(h > 0 && !facingRight)
+				// ... flip the player.
+				Flip();
+			// Otherwise if the input is moving the player left and the player is facing right...
+			else if(h < 0 && facingRight)
+				// ... flip the player.
+				Flip();
+
 		}
 
 		if(rigidbody2D.velocity.y ==0)
@@ -60,6 +70,15 @@ public class Movment : MonoBehaviour {
 			isGrounded = true;
 		}
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
+	}
+
+	void Flip() {
+		facingRight = !facingRight;
+		
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 
 }

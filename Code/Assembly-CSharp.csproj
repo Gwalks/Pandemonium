@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\BombPickup.cs" />
@@ -67,6 +66,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Level1Uni1.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Movment.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\TextBox.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupSpawner.cs" />

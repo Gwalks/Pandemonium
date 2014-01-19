@@ -10,16 +10,13 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		temp = rigidbody2D.velocity;
-		temp.x = speed;
-		rigidbody2D.velocity = temp;
 
 		level = GameObject.FindGameObjectWithTag("Level");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		Destroy(gameObject, 2.0f);
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -29,5 +26,10 @@ public class Bullet : MonoBehaviour {
 			Debug.Log ("You've been hit!");
 			level.SendMessage("LoseGame");
 		}
+	}
+
+	void TimeOut()
+	{
+
 	}
 }

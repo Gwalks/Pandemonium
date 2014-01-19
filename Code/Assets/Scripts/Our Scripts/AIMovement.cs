@@ -45,13 +45,13 @@ public class AIMovement : MonoBehaviour {
 
 		if(paceTimer <= 0)
 		{
-			ChangeDirection();
+			PauseAI();
 			paceTimer = timeToPace;
 			pause = true;
 		}
 		if(pauseTimer <= 0)
 		{
-			PauseAI();
+			ChangeDirection();
 			pauseTimer = timeToPause;
 			pause = false;
 		}
@@ -81,6 +81,8 @@ public class AIMovement : MonoBehaviour {
 			break;
 		}
 
+		Flip();
+
 	}
 
 	void MoveAI()
@@ -95,8 +97,6 @@ public class AIMovement : MonoBehaviour {
 		temp = rigidbody2D.velocity;
 		temp.x = (float)PacingDirection.center * pacingSpeed;
 		rigidbody2D.velocity = temp;
-		
-		Flip();
 
 	}
 

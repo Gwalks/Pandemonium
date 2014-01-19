@@ -6,6 +6,7 @@ public class Level1Uni1 : MonoBehaviour {
 	Inventory i;
 	public int numOfKeys;
 	public float levelTime;
+	public string levelName;
 	
 	// Use this for initialization
 	void Start () {
@@ -50,7 +51,7 @@ public class Level1Uni1 : MonoBehaviour {
 	void ChangeLevel()
 	{
 		Debug.Log("Change Level");
-		Application.LoadLevel("Level1Dim2");
+		Application.LoadLevel(levelName);
 	}
 
 }

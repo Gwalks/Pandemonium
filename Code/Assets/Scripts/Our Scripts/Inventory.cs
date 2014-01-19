@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour {
 	{
 		for(int i = 0; i < numOfKeysCollected; i++)
 		{
+			Debug.Log("boop2");
 			if(keys[i].GetKeyNum() == doorNumber)
 				return true;
 		}

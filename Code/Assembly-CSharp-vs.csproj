@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Movment.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlatformMove.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\PlatformSwing.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />

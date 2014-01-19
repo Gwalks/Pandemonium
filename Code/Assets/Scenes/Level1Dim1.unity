@@ -655,7 +655,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 2a75c10e7354d7941aaa2bc5d8bbef46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 040b1aee6ad6d674c839e7219b538296, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &441160255
 Transform:
@@ -904,6 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfKeys: 1
   levelTime: 10
+  levelName: 
 --- !u!4 &890508105
 Transform:
   m_ObjectHideFlags: 0
@@ -965,7 +966,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 2a75c10e7354d7941aaa2bc5d8bbef46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 040b1aee6ad6d674c839e7219b538296, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1183666563
 Transform:
@@ -1092,7 +1093,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 2a75c10e7354d7941aaa2bc5d8bbef46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 040b1aee6ad6d674c839e7219b538296, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1380540715
 Transform:
@@ -1205,7 +1206,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 2a75c10e7354d7941aaa2bc5d8bbef46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 040b1aee6ad6d674c839e7219b538296, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1427972727
 Transform:
@@ -1723,7 +1724,7 @@ Transform:
   m_PrefabInternal: {fileID: 1565336526}
   m_GameObject: {fileID: 1786607855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.201554954, y: .649765074, z: 0}
+  m_LocalPosition: {x: -.201554954, y: .649765074, z: -7.90869188}
   m_LocalScale: {x: .774365127, y: .774364352, z: 1}
   m_Children: []
   m_Father: {fileID: 438787704}
@@ -1933,8 +1934,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 8, y: 4.67999983}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 4, y: 4.67999983}
+  m_Center: {x: 4, y: 0}
 --- !u!114 &1993993802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,7 +1948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4690aeab9a57ccd44b88634e786c42e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 100000, guid: 65dd318a8a51190478e859874d79cf91, type: 2}
+  bullet: {fileID: 5000000, guid: 65dd318a8a51190478e859874d79cf91, type: 2}
+  bulletSpeed: 20
 --- !u!114 &1993993803
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class MoveCamera : MonoBehaviour {
 	public float speed;
 
 	Vector3 playerPosition;
-	Vector3 updatePlayer;
 	Vector3 screenPos;
 
 	private float xPlayer;
@@ -16,20 +15,21 @@ public class MoveCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//move the camera
 		position = transform.position;
 		position.x += speed;
 		transform.position = position;
 
+		//calculate 
 		playerPosition = GameObject.FindGameObjectWithTag ("Player").transform.position;
+		// get the position from camera to screen position
 		screenPos = Camera.main.WorldToScreenPoint (playerPosition);
 
 		// change the value between 0 to 1
-	//	Debug.Log ("player postion " + screenPos);
+		//	Debug.Log ("player postion " + screenPos);
 
 		if (screenPos.x < 0) {
 			Debug.Log ("game over");
 		}
-		//if (transform.position.x > playerPosition.x) {
-
 	}
 }

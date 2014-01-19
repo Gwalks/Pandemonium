@@ -57,8 +57,8 @@ TextureImporter:
     - name: Right
       rect:
         serializedVersion: 2
-        x: 1263
-        y: 578
+        x: 1260
+        y: 575
         width: 112
         height: 252
       alignment: 1
@@ -66,20 +66,20 @@ TextureImporter:
     - name: LeftLeg
       rect:
         serializedVersion: 2
-        x: 423
-        y: 121
+        x: 417
+        y: 130
         width: 167
         height: 201
-      alignment: 9
+      alignment: 2
       pivot: {x: .5, y: 1}
     - name: RightLeg
       rect:
         serializedVersion: 2
         x: 1248
-        y: 149
+        y: 152
         width: 157
         height: 238
-      alignment: 9
+      alignment: 2
       pivot: {x: .5, y: 1}
     - name: Body
       rect:
@@ -90,5 +90,5 @@ TextureImporter:
         height: 682
       alignment: 0
       pivot: {x: .5, y: .5}
-  spritePackingTag: 
+  spritePackingTag: characters
   userData: 

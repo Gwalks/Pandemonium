@@ -80,10 +80,7 @@ public class AIMovement : MonoBehaviour {
 			p = PacingDirection.left;
 			break;
 		}
-		if (p == PacingDirection.left)
-			Flip();
-		else if (p == PacingDirection.right)
-			Flip();
+
 	}
 
 	void MoveAI()
@@ -98,5 +95,13 @@ public class AIMovement : MonoBehaviour {
 		temp = rigidbody2D.velocity;
 		temp.x = (float)PacingDirection.center * pacingSpeed;
 		rigidbody2D.velocity = temp;
+		
+		Flip();
+
+	}
+
+	public int GetDirection()
+	{
+		return (int)p;
 	}
 }

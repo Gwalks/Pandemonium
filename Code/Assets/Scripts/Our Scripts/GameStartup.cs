@@ -52,7 +52,7 @@ public class GameStartup : MonoBehaviour {
 		}
 		
 		if (buttons[0]) {
-			Application.LoadLevel(2);
+			Application.LoadLevel(1);
 		}
 		if (buttons[1]) {
 			Debug.Log("Second button pressed");

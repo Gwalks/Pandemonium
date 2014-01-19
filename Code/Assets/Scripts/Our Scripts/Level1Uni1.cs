@@ -23,6 +23,7 @@ public class Level1Uni1 : MonoBehaviour {
 	public void AddKey(int keyNum)
 	{
 		i.AddKey(keyNum);
+		Debug.Log("boop");
 	}
 
 	public bool CheckDoor(int doorNum)

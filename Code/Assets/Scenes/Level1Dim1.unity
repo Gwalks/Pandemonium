@@ -712,7 +712,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: orthographic size
-      value: 20.474966
+      value: 19.9165173
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: xMargin
@@ -726,7 +726,8 @@ Prefab:
       propertyPath: maxXAndY.x
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
   m_RootGameObject: {fileID: 1746972215}
   m_IsPrefabParent: 0
@@ -1257,8 +1258,8 @@ GameObject:
   - 20: {fileID: 1746972220}
   - 92: {fileID: 1746972219}
   - 124: {fileID: 1746972218}
-  - 114: {fileID: 1746972217}
   - 81: {fileID: 1746972216}
+  - 114: {fileID: 1746972217}
   m_Layer: 0
   m_Name: mainCamera
   m_TagString: MainCamera
@@ -1277,21 +1278,15 @@ AudioListener:
 --- !u!114 &1746972217
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 837732250}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746972215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1ff7ff4ce484f1aad8887efed74b11, type: 3}
+  m_Script: {fileID: 11500000, guid: 485716d2e054f944594e362e7c82ddd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMargin: 0
-  yMargin: 2
-  xSmooth: 0
-  ySmooth: 2
-  maxXAndY: {x: 5, y: 5}
-  minXAndY: {x: -5, y: -5}
+  speed: .0500000007
 --- !u!124 &1746972218
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1329,7 +1324,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20.474966
+  orthographic size: 19.9165173
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1549,6 +1544,7 @@ GameObject:
   - 33: {fileID: 1967771456}
   - 23: {fileID: 1967771455}
   - 61: {fileID: 1967771453}
+  - 114: {fileID: 1967771454}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1567,6 +1563,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .99999994, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1967771454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967771452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f98a0b15256c4943b2f9d04baf2b973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .0500000007
+  maxAmount: -5
+  vert: 1
 --- !u!23 &1967771455
 Renderer:
   m_ObjectHideFlags: 0

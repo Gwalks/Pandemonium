@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
 	Vector2 temp;
 	GameObject level;
 
+
 	// Use this for initialization
 	void Start () {
 		temp = rigidbody2D.velocity;

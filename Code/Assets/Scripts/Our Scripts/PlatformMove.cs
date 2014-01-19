@@ -20,15 +20,13 @@ public class PlatformMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (position.x);
-		Debug.Log (position.y);
 		if(vert) { //vertical direction
 			if (max) {
-				position.y -= speed;
+				position.y -= speed; // max = true = down
 				transform.position = position;
 			}
 			else {
-				position.y += speed;
+				position.y += speed; // max = true = up
 				transform.position = position;
 			}
 		}
@@ -43,7 +41,7 @@ public class PlatformMove : MonoBehaviour {
 			}
 		}
 		// check the range to set true or false in max
-		if(vert) {
+		if(vert && maxAmount > 0) {
 			if(position.y >= ypos + maxAmount) {
 				max = true;
 			}

@@ -11,10 +11,10 @@ public class Movment : MonoBehaviour {
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-	//Animator anim;
+	Animator anim;
 	// Use this for initialization
 	void Start () {
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 		isGrounded = true;
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
@@ -23,29 +23,27 @@ public class Movment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//anim.SetInteger("WalkTransition",0);
+		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
 		if(isGrounded)
 		{
 			if (Input.GetKey(leftKey)) 
 			{
-				//anim.SetInteger("WalkTransition",1);
-				//rigidbody2D.velocity.x = speed*-1;
+				anim.SetInteger("WalkTransition",1);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*-1;
 				rigidbody2D.velocity = temp;
 			}
 			if (Input.GetKey(rightKey)) 
 			{
-				//anim.SetInteger("WalkTransition",1);
-				//rigidbody2D.velocity.x = speed;
+				anim.SetInteger("WalkTransition",1);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed;
 				rigidbody2D.velocity = temp;
 			}
 			if(Input.GetKeyDown(jump))
 			{
-				//anim.SetInteger("WalkTransition",2);
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.y = jumpSpeed;
 				rigidbody2D.velocity = temp;
@@ -53,7 +51,7 @@ public class Movment : MonoBehaviour {
 			}
 			if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 			{
-				//anim.SetInteger("WalkTransition",2);
+				anim.SetInteger("WalkTransition",2);
 				Vector2 temp = rigidbody2D.velocity;
 				temp.x = speed*0;
 				rigidbody2D.velocity = temp;
@@ -79,7 +77,7 @@ public class Movment : MonoBehaviour {
 			isGrounded = true;
 		}
 		else{
-			//anim.SetInteger("WalkTransition",2);
+			anim.SetInteger("WalkTransition",2);
 		}
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}

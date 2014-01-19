@@ -18,11 +18,13 @@ public class Door : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if( col.gameObject.name == "player")
+		if( col.gameObject.name == "player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
 		{
-			level.SendMessage("CheckDoor", doorNum);
+
 			gameObject.active = false; 
 		}
 	}
+
+
 	
 }

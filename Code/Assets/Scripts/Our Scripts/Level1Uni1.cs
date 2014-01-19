@@ -15,18 +15,29 @@ public class Level1Uni1 : MonoBehaviour {
 	void Update () {
 	}
 
+	void OnGUI() {
+		GUIStyle timeStyle = new GUIStyle();
+		timeStyle.fontSize = 20;
+		GUI.Label(new Rect(Screen.width - 100,0,50,25),"Time",timeStyle);
+	}
 	public void AddKey(int keyNum)
 	{
 		i.AddKey(keyNum);
 	}
 
-	void CheckDoor(int doorNum)
+	public bool CheckDoor(int doorNum)
 	{
 		if(i.CheckIfHaveKey(doorNum))
 		{
+			return true;
 			Debug.Log ("OpenedDoor");
 		}
+		return false;
 	}
 
+	public void EndGame()
+	{
+		Debug.Log("Game Over");
+	}
 
 }

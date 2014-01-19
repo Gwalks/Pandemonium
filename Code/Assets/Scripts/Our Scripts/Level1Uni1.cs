@@ -5,6 +5,7 @@ public class Level1Uni1 : MonoBehaviour {
 
 	Inventory i;
 	public int numOfKeys;
+	public float levelTime;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,11 @@ public class Level1Uni1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		levelTime -= Time.deltaTime;
+		if(levelTime <= 0)
+		{
+			ChangeLevel ();
+		}
 	}
 
 	void OnGUI() {
@@ -36,9 +42,15 @@ public class Level1Uni1 : MonoBehaviour {
 		return false;
 	}
 
-	public void EndGame()
+	public void LoseGame()
 	{
 		Debug.Log("Game Over");
+	}
+
+	void ChangeLevel()
+	{
+		Debug.Log("Change Level");
+		Application.LoadLevel("Level1Dim2");
 	}
 
 }

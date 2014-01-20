@@ -7,6 +7,7 @@ public class Level1Uni1 : MonoBehaviour {
 	public int numOfKeys;
 	public string levelName;
 	public float levelTime;
+	int keysCollected;
 
 	bool pauseTimer = false;
 
@@ -14,24 +15,30 @@ public class Level1Uni1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		i = new Inventory(numOfKeys);
+		keysCollected = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(!pauseTimer)
 			levelTime -= Time.deltaTime;
-		if(Input.GetKeyDown(KeyCode.LeftAlt)){GrantCode();}
+		if(Input.GetKeyDown(KeyCode.LeftAlt)){GrantCode();} //dammit grant - Tyler
+		if (Input.GetKeyUp(KeyCode.Escape))
+			Application.LoadLevel("Start");
+
 	}
 
 	void OnGUI() {
 		GUIStyle timeStyle = new GUIStyle();
 		timeStyle.fontSize = 20;
 		GUI.Label(new Rect(Screen.width - 100,0,50,25),"Time: " + (int)levelTime,timeStyle);
+		GUI.Label(new Rect(0,0,50,25), "Keys: " + keysCollected + " / " + numOfKeys, timeStyle);
 	}
+
 	public void AddKey(int keyNum)
 	{
 		i.AddKey(keyNum);
-		Debug.Log("boop");
+		keysCollected++;
 	}
 
 	public bool CheckDoor(int doorNum)

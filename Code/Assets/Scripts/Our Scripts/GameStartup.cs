@@ -61,7 +61,7 @@ public class GameStartup : MonoBehaviour {
 			}
 			
 			if (buttons[0]) {
-				Application.LoadLevel("Level1Dim1");
+				Application.LoadLevel("Story");
 			}
 			if (buttons[1]) {
 				Debug.Log("Second button pressed");

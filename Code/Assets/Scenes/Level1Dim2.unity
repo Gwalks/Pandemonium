@@ -5698,6 +5698,7 @@ GameObject:
   - 95: {fileID: 687571265}
   - 114: {fileID: 687571264}
   - 58: {fileID: 687571266}
+  - 82: {fileID: 687571268}
   m_Layer: 0
   m_Name: PandaRun
   m_TagString: Player
@@ -5738,6 +5739,8 @@ MonoBehaviour:
   facingRight: 1
   speed: 10
   jumpSpeed: 16
+  jumpClip: {fileID: 8300000, guid: 9d1c17d5d6e76f042a958d9ce645bbe9, type: 3}
+  tele: {fileID: 8300000, guid: 5ad4956bbce131d4ca4b58cc28aef630, type: 3}
 --- !u!95 &687571265
 Animator:
   serializedVersion: 2
@@ -5780,6 +5783,64 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!82 &687571268
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687571262}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &688431107
 Prefab:
   m_ObjectHideFlags: 0
@@ -12739,6 +12800,14 @@ Prefab:
       propertyPath: jumpSpeed
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9443403ce7f321740b8f1b0aa304c2f0, type: 2}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d1c17d5d6e76f042a958d9ce645bbe9, type: 3}
+    - target: {fileID: 11400000, guid: 9443403ce7f321740b8f1b0aa304c2f0, type: 2}
+      propertyPath: tele
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ad4956bbce131d4ca4b58cc28aef630, type: 3}
     m_RemovedComponents:
     - {fileID: 6100000, guid: 9443403ce7f321740b8f1b0aa304c2f0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9443403ce7f321740b8f1b0aa304c2f0, type: 2}

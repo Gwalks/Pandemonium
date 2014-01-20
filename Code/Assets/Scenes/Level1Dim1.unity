@@ -889,12 +889,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-  - "Eh, what\u2019s that?..."
+  - "Eh, what\u2019s that?... "
   - Escape?... I would never consider such a preposterous thing!
-  - "This is MY cell! Mine, mine, MINE! Do you know how difficult it is for a Gorilla
-    to get his own cell in this crummy, pathetic excuse of a third-rate zoo? No, of
-    course you don\u2019t, cuz you\u2019re a stupid Panda and you eat bamboo. Plus,
-    I couldn\u2019t stand living next to those feces-flingers in the chimp cage!"
+  - This is MY cell! Mine, mine, MINE! Do you know how difficult it is for a Gorilla
+    to get his own cell in this crummy, pathetic excuse of a third-rate zoo?
+  - "No, of course you don\u2019t, cuz you\u2019re a stupid Panda and you eat bamboo."
+  - "Plus, I couldn\u2019t stand living next to those feces-flingers in the chimp
+    cage!"
 --- !u!61 &251914869
 BoxCollider2D:
   m_ObjectHideFlags: 0

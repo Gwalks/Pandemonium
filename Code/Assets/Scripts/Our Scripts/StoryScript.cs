@@ -9,9 +9,8 @@ public class StoryScript : MonoBehaviour {
 
 	Dictionary<int,string[]> arr = new Dictionary<int, string[]>();
 
-	int stringindex=0;
-	int index = 0;
-	public AudioClip aud;
+	int stringIndex = 0;
+	int frameIndex = 0;
 
 	public string[] frame1 = new string[3];
 	public string[] frame2 = new string[3];
@@ -27,13 +26,15 @@ public class StoryScript : MonoBehaviour {
 	}
 	void OnGUI()
 	{
-		if(stringindex>=temp.Length)
+		if(stringIndex>=temp.Length)
 		{
-			gt[index].enabled=false;
-			index++;
-			stringindex = 0;
+			if (frameIndex != 2) {
+				gt[frameIndex].enabled=false;
+			}
+			frameIndex++;
+			stringIndex = 0;
 		}
-		GUI.Box(new Rect(0,Screen.height-100, Screen.width, 200),temp[stringindex]);
+		GUI.Box(new Rect(0,Screen.height-100, Screen.width, 200),temp[stringIndex]);
 	}
 	// Use this for initialization
 	void Start () 
@@ -43,21 +44,23 @@ public class StoryScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(index >= gt.Length)
+		if(stringIndex>temp.Length)
+		{
+			if (frameIndex != 2) {
+				gt[frameIndex].enabled=false;
+				frameIndex++;
+			}
+			stringIndex = 0;
+		}
+		if(frameIndex > gt.Length - 1)
 		{
 			Application.LoadLevel(2);	
 		}
-		temp = arr[index];
-		if(stringindex>=temp.Length)
-		{
-			gt[index].enabled=false;
-			index++;
-			stringindex = 0;
-		}
+		temp = arr[frameIndex];
 		if(Input.GetKeyUp(KeyCode.Return))
 		{
-			stringindex++;
-			audio.PlayOneShot(aud);
+			stringIndex++;
+			Debug.Log(stringIndex);
 		}
 	}
 }

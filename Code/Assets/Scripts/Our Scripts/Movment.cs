@@ -93,7 +93,7 @@ public class Movment : MonoBehaviour {
 			else{
 				anim.SetInteger("WalkTransition",2);
 			}
-			Debug.Log(rigidbody2D.velocity.y.ToString());
+			//Debug.Log(rigidbody2D.velocity.y.ToString());
 		}
 	}
 

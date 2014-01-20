@@ -11,6 +11,7 @@ public class StoryScript : MonoBehaviour {
 
 	int stringindex=0;
 	int index = 0;
+	public AudioClip aud;
 
 	public string[] frame1 = new string[3];
 	public string[] frame2 = new string[3];
@@ -56,6 +57,7 @@ public class StoryScript : MonoBehaviour {
 		if(Input.GetKeyUp(KeyCode.Return))
 		{
 			stringindex++;
+			audio.PlayOneShot(aud);
 		}
 	}
 }

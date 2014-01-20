@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 8ee6657c5e4720543a7e9526109f2364
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Palm_dual_bended
+    100002: Palm_tree_bended
+    100004: Palm_tree_dual
+    100006: Palm_tree_straight
+    100008: //RootNode
+    100010: palm_trio
+    100012: Palm_tree_bended_leafs
+    100014: Palm_tree_dual_bended_leafs
+    100016: Palm_tree_dual_bended_trunks
+    100018: Palm_tree_dual_leafs
+    100020: Palm_tree_dual_trunks
+    100022: Palm_tree_single_bended_trunk
+    100024: Palm_tree_single_leafs
+    100026: Palm_tree_single_trunk
+    100028: Palm_tree_trio_leafs
+    100030: Palm_tree_trio_trunks
+    400000: Palm_dual_bended
+    400002: Palm_tree_bended
+    400004: Palm_tree_dual
+    400006: Palm_tree_straight
+    400008: //RootNode
+    400010: palm_trio
+    400012: Palm_tree_bended_leafs
+    400014: Palm_tree_dual_bended_leafs
+    400016: Palm_tree_dual_bended_trunks
+    400018: Palm_tree_dual_leafs
+    400020: Palm_tree_dual_trunks
+    400022: Palm_tree_single_bended_trunk
+    400024: Palm_tree_single_leafs
+    400026: Palm_tree_single_trunk
+    400028: Palm_tree_trio_leafs
+    400030: Palm_tree_trio_trunks
+    2300000: Palm_dual_bended
+    2300002: Palm_tree_bended
+    2300004: Palm_tree_dual
+    2300006: Palm_tree_straight
+    2300008: palm_trio
+    2300010: Palm_tree_bended_leafs
+    2300012: Palm_tree_dual_bended_leafs
+    2300014: Palm_tree_dual_bended_trunks
+    2300016: Palm_tree_dual_leafs
+    2300018: Palm_tree_dual_trunks
+    2300020: Palm_tree_single_bended_trunk
+    2300022: Palm_tree_single_leafs
+    2300024: Palm_tree_single_trunk
+    2300026: Palm_tree_trio_leafs
+    2300028: Palm_tree_trio_trunks
+    3300000: Palm_dual_bended
+    3300002: Palm_tree_bended
+    3300004: Palm_tree_dual
+    3300006: Palm_tree_straight
+    3300008: palm_trio
+    3300010: Palm_tree_bended_leafs
+    3300012: Palm_tree_dual_bended_leafs
+    3300014: Palm_tree_dual_bended_trunks
+    3300016: Palm_tree_dual_leafs
+    3300018: Palm_tree_dual_trunks
+    3300020: Palm_tree_single_bended_trunk
+    3300022: Palm_tree_single_leafs
+    3300024: Palm_tree_single_trunk
+    3300026: Palm_tree_trio_leafs
+    3300028: Palm_tree_trio_trunks
+    4300000: Palm_dual_bended
+    4300002: Palm_tree_bended
+    4300004: Palm_tree_dual
+    4300006: Palm_tree_straight
+    4300008: palm_trio
+    4300010: Palm_tree_bended_leafs
+    4300012: Palm_tree_dual_bended_leafs
+    4300014: Palm_tree_dual_bended_trunks
+    4300016: Palm_tree_dual_leafs
+    4300018: Palm_tree_dual_trunks
+    4300020: Palm_tree_single_bended_trunk
+    4300022: Palm_tree_single_leafs
+    4300024: Palm_tree_single_trunk
+    4300026: Palm_tree_trio_leafs
+    4300028: Palm_tree_trio_trunks
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

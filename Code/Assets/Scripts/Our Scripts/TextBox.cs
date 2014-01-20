@@ -11,7 +11,7 @@ public class TextBox : MonoBehaviour {
 
 	void OnGUI() {
 		if (showText && textIndex != text.Length){
-			GUI.Box(new Rect(guiTextBoxLoc.x,guiTextBoxLoc.y,Screen.width,Screen.height/8),text[textIndex]);
+			GUI.Box(new Rect(guiTextBoxLoc.x,guiTextBoxLoc.y,Screen.width,(Screen.height*7)/8),text[textIndex]);
 		}
 		if(textIndex >= text.Length)
 			GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().UnPauseTimer();
@@ -30,14 +30,12 @@ public class TextBox : MonoBehaviour {
 		}
 		/*if (showText)
 			bufferSeconds -= Time.deltaTime;*/
-		Debug.Log(textIndex);
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
 		//Debug.Log ("Bacon");
 		if (Input.GetKeyUp(KeyCode.E) && other.gameObject.tag == "Player") {
 			showText = true;
-			Debug.Log ("Bacon");
 			GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().PauseTimer();
 		}
 
@@ -47,7 +45,6 @@ public class TextBox : MonoBehaviour {
 	{
 		GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().UnPauseTimer();
 		showText = false;
-
 	}
 
 }

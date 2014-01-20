@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bdbb5aeccb113047996b14689da8930
+guid: b234e1ed7f13c924c8c01f8d1978f917
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -20,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -45,16 +45,25 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: OilBase
+    - name: Oil slick asset_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 477
-        width: 1831
-        height: 153
+        x: 900
+        y: 915
+        width: 241
+        height: 203
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Bubble1
+      pivot: {x: 0, y: 0}
+    - name: Oil slick asset_1
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 720
+        width: 91
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Oil slick asset_2
       rect:
         serializedVersion: 2
         x: 1118
@@ -62,24 +71,15 @@ TextureImporter:
         width: 90
         height: 88
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Bubble2
+      pivot: {x: 0, y: 0}
+    - name: Oil slick asset_3
       rect:
         serializedVersion: 2
-        x: 800
-        y: 721
-        width: 86
-        height: 101
+        x: 89
+        y: 477
+        width: 1831
+        height: 138
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Bubble3
-      rect:
-        serializedVersion: 2
-        x: 903
-        y: 918
-        width: 236
-        height: 198
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

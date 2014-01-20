@@ -11,10 +11,8 @@ public class Movment : MonoBehaviour {
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
+	private bool keyboardEnable;
 	Animator anim;
-
-	bool teleporting;
-
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -22,76 +20,75 @@ public class Movment : MonoBehaviour {
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
 		jump = KeyCode.Space;
-
-		teleporting = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
-		if(isGrounded && !teleporting)
-		{
-			if (Input.GetKey(leftKey)) 
+		if (keyboardEnable) {
+			if(isGrounded)
 			{
-				anim.SetInteger("WalkTransition",1);
-				Vector2 temp = rigidbody2D.velocity;
-				temp.x = speed*-1;
-				rigidbody2D.velocity = temp;
+				if (Input.GetKey(leftKey)) 
+				{
+					anim.SetInteger("WalkTransition",1);
+					Vector2 temp = rigidbody2D.velocity;
+					temp.x = speed*-1;
+					rigidbody2D.velocity = temp;
+				}
+				if (Input.GetKey(rightKey)) 
+				{
+					anim.SetInteger("WalkTransition",1);
+					Vector2 temp = rigidbody2D.velocity;
+					temp.x = speed;
+					rigidbody2D.velocity = temp;
+				}
+				if(Input.GetKeyDown(jump))
+				{
+					anim.SetInteger("WalkTransition",2);
+					Vector2 temp = rigidbody2D.velocity;
+					temp.y = jumpSpeed;
+					rigidbody2D.velocity = temp;
+					isGrounded = false;
+				}
+				//if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
+				if (Input.GetKeyUp(jump))
+				{
+					anim.SetInteger("WalkTransition",2);
+					Vector2 temp = rigidbody2D.velocity;
+					temp.x = speed*0;
+					rigidbody2D.velocity = temp;
+				}
+				if (h > 0 && !facingRight) {
+					Flip();
+				}
+				else if (h < 0 && facingRight) {
+					Flip();
+				}
+				if(h > 0 && !facingRight)
+					// ... flip the player.
+					Flip();
+				// Otherwise if the input is moving the player left and the player is facing right...
+				else if(h < 0 && facingRight)
+					// ... flip the player.
+					Flip();
+
 			}
-			else if (Input.GetKey(rightKey)) 
+
+			if(rigidbody2D.velocity.y ==0)
 			{
-				anim.SetInteger("WalkTransition",1);
-				Vector2 temp = rigidbody2D.velocity;
-				temp.x = speed;
-				rigidbody2D.velocity = temp;
+				isGrounded = true;
 			}
-			if(Input.GetKeyDown(jump))
-			{
+			else{
 				anim.SetInteger("WalkTransition",2);
-				Vector2 temp = rigidbody2D.velocity;
-				temp.y = jumpSpeed;
-				rigidbody2D.velocity = temp;
-				isGrounded = false;
 			}
-			if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
-			{
-				anim.SetInteger("WalkTransition",2);
-				Vector2 temp = rigidbody2D.velocity;
-				temp.x = speed*0;
-				rigidbody2D.velocity = temp;
-			}
-			if (h > 0 && !facingRight) {
-				Flip();
-			}
-			else if (h < 0 && facingRight) {
-				Flip();
-			}
-			if(h > 0 && !facingRight)
-				// ... flip the player.
-				Flip();
-			// Otherwise if the input is moving the player left and the player is facing right...
-			else if(h < 0 && facingRight)
-				// ... flip the player.
-				Flip();
-
+			Debug.Log(rigidbody2D.velocity.y.ToString());
 		}
-
-		if(rigidbody2D.velocity.y ==0)
-		{
-			isGrounded = true;
+		else {
+			float z = Input.GetAxis("Vertical");
+			if (z == 0)
+				keyboardEnable = true;
 		}
-		else{
-			anim.SetInteger("WalkTransition",2);
-		}
-		//Debug.Log(rigidbody2D.velocity.y.ToString());
-	}
-
-	void OnCollisionStay2D(Collision2D other) {
-
-
-
 	}
 
 	void Flip() {
@@ -103,9 +100,18 @@ public class Movment : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	public void IsTelePorting()
-	{
-		teleporting = true;
+	void OnCollisionStay2D(Collision2D other) {
+		float h = Input.GetAxis("Horizontal");
+		if (other.gameObject.tag == "Obstacle" && h != 0) {
+			Vector2 temp = rigidbody2D.velocity;
+			temp.y = -10;
+			temp.x = 0;
+			rigidbody2D.velocity = temp;
+			isGrounded = true;
+			keyboardEnable = false;
+
+		}
+		//Debug.Log(z);
 	}
 
 }

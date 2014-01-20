@@ -17,9 +17,12 @@ public class Level1Uni1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!pauseTimer && levelTime >= 0)
+		if(!pauseTimer)
 			levelTime -= Time.deltaTime;
-
+		if(levelTime <= 0)
+		{
+			ChangeLevel ();
+		}
 	}
 
 	void OnGUI() {
@@ -50,7 +53,8 @@ public class Level1Uni1 : MonoBehaviour {
 
 	void ChangeLevel()
 	{
-		Application.LoadLevel(levelName);
+		Debug.Log("Change Level");
+		//Application.LoadLevel(levelName);
 	}
 
 	public void PauseTimer()
@@ -63,8 +67,4 @@ public class Level1Uni1 : MonoBehaviour {
 		pauseTimer = false;
 	}
 
-	public float GetTimer()
-	{
-		return levelTime;
-	}
 }

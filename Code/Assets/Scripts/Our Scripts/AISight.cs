@@ -28,8 +28,8 @@ public class AISight : MonoBehaviour {
 
 		Debug.Log(clone.velocity + ": " + (int)transform.GetComponent<AIMovement>().GetDirection() );
 
-		Rigidbody2D clone = (Rigidbody2D) Instantiate(bullet, transform.parent.position, Quaternion.identity);
-		clone.velocity = Vector2.right * bulletSpeed * (int)transform.parent.GetComponent<AIMovement>().GetDirection();
+		//Rigidbody2D clone = (Rigidbody2D) Instantiate(bullet, transform.parent.position, Quaternion.identity);
+		//clone.velocity = Vector2.right * bulletSpeed * (int)transform.parent.GetComponent<AIMovement>().GetDirection();
 	}
 
 	void OnTriggerEnter2D( Collider2D col)

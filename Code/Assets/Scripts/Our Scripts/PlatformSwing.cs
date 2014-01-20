@@ -8,14 +8,16 @@ public class PlatformSwing : MonoBehaviour {
 	private int counter = 0;
 	public float totalTime;
 
+
 	public float speed;
 	private int direction;
 	Vector3 pos;
+	Vector3 startPos;
 	// Use this for initialization
 	void Start () {
 		xpos = transform.position.x;
 		ypos = transform.position.y;
-		pos = transform.position;
+		startPos = pos = transform.position;
 		startTime = totalTime;
 	}
 	
@@ -37,6 +39,7 @@ public class PlatformSwing : MonoBehaviour {
 		else {
 			totalTime = startTime;
 			counter++;
+			pos = startPos;
 		}
 
 		if ((direction == 1) && (counter % 2 == 0)) {

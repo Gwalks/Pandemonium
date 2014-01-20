@@ -403,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 890508103}
   doorNum: 1
+  sceneNumber: 0
 --- !u!212 &113078772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3107,7 +3108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfKeys: 1
   levelName: Level1Dim2
-  levelTime: 100
+  levelTime: 10
   gwalks: {fileID: 0}
 --- !u!4 &890508105
 Transform:

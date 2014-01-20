@@ -11,7 +11,14 @@ public class HelpScreen : MonoBehaviour {
 		mainScreen = GameObject.Find("MainMenu");
 
 	}
-	
+
+	void OnEnable() {
+		helpScreen.SetActive(true);
+	}
+
+	void OnDisable() {
+		helpScreen.SetActive(false);
+	}
 	// Update is called once per frame
 	void Update () {
 	
@@ -26,10 +33,7 @@ public class HelpScreen : MonoBehaviour {
 			backButton = true;
 
 		if (backButton) {
-			helpScreen.SetActive(false);
-			mainScreen.SetActive(true);
-			this.GetComponent<GameStartup>().enabled = true;
-			this.enabled = false;
+			Application.LoadLevel("Start");
 		}
 
 		GUI.FocusControl(backText);

@@ -17,18 +17,9 @@ public class GameStartup : MonoBehaviour {
 		//menuScreen = this.gameObject.GetComponent("GUITexture") as GUITexture;
 	}
 
-	void OnEnable() {
-		mainScreen.SetActive(true);
-	}
-
-	void OnDisable() {
-		mainScreen.SetActive(false);
-	}
-
 	void Start () {
 		buttons = new bool[buttonNames.Length];
 		helpTexture = GameObject.Find("HelpScreen");
-		this.GetComponent<HelpScreen>().enabled = false;
 		mainScreen = GameObject.Find("MainMenu");
 		//helpTexture.SetActive(false);
 		/*int textureWidth = menuScreen.texture.width;
@@ -57,28 +48,6 @@ public class GameStartup : MonoBehaviour {
 
 	void OnGUI()
 	{
-		if (helpActive) {
-			/*GUI.SetNextControlName(buttonNames[3]);
-			buttons[3] = GUI.Button (new Rect((Screen.width*5)/8,250,350,50),buttonNames[3]);
-			
-			if (Input.GetKeyUp(KeyCode.Return)) {
-				Vector3 temp = helpTexture.transform.position;
-				temp.z = 0;
-				helpTexture.transform.position = temp;
-				helpActive = false;
-				buttons[3] = false;
-			}
-			
-			if (buttons[3]) {
-				Vector3 temp = helpTexture.transform.position;
-				temp.z = 0;
-				helpTexture.transform.position = temp;
-				helpActive = false;
-				Debug.Log("GOBACK");
-				buttons[3] = false;
-			}
-			GUI.FocusControl(buttonNames[3]);*/
-		}
 
 		if (!helpActive && !exitActive) {
 			for (int i = 0; i < buttonNames.Length; i++) 
@@ -92,12 +61,11 @@ public class GameStartup : MonoBehaviour {
 			}
 			
 			if (buttons[0]) {
-				Application.LoadLevel(1);
+				Application.LoadLevel("Level1Dim1");
 			}
 			if (buttons[1]) {
 				Debug.Log("Second button pressed");
-				this.GetComponent<HelpScreen>().enabled = true;
-				this.enabled = false;
+				Application.LoadLevel("HelpScreen");
 			}
 			if (buttons[2]) {
 				Debug.Log("Third button pressed");

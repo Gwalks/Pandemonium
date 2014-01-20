@@ -5,9 +5,10 @@ public class GameStartup : MonoBehaviour {
 
 	// Use this for initialization
 	//public GUITexture menuScreen;
-	private string [] buttonNames= {"Play","Help","Exit","Back"};
+	private string [] buttonNames= {"Play","Help","Exit"};
 	private bool[] buttons;
 	private GameObject helpTexture;
+	private GameObject mainScreen;
 	private bool helpActive = false;
 	private bool exitActive = false;
 	int currentSelection = 0;
@@ -16,9 +17,20 @@ public class GameStartup : MonoBehaviour {
 		//menuScreen = this.gameObject.GetComponent("GUITexture") as GUITexture;
 	}
 
+	void OnEnable() {
+		mainScreen.SetActive(true);
+	}
+
+	void OnDisable() {
+		mainScreen.SetActive(false);
+	}
+
 	void Start () {
 		buttons = new bool[buttonNames.Length];
 		helpTexture = GameObject.Find("HelpScreen");
+		this.GetComponent<HelpScreen>().enabled = false;
+		mainScreen = GameObject.Find("MainMenu");
+		//helpTexture.SetActive(false);
 		/*int textureWidth = menuScreen.texture.width;
 		int textureHeight = menuScreen.texture.height;
 		int screenWidth = Screen.width;
@@ -69,7 +81,7 @@ public class GameStartup : MonoBehaviour {
 		}
 
 		if (!helpActive && !exitActive) {
-			for (int i = 0; i < buttonNames.Length - 1; i++) 
+			for (int i = 0; i < buttonNames.Length; i++) 
 			{
 				GUI.SetNextControlName(buttonNames[i]);
 				//buttons[i] = GUI.Button(new Rect(Screen.width - 100,70 + (20 * i), 80, 20),buttonNames[i]);
@@ -84,10 +96,8 @@ public class GameStartup : MonoBehaviour {
 			}
 			if (buttons[1]) {
 				Debug.Log("Second button pressed");
-				helpActive = true;
-				Vector3 temp = helpTexture.transform.position;
-				temp.z = 1;
-				helpTexture.transform.position = temp;
+				this.GetComponent<HelpScreen>().enabled = true;
+				this.enabled = false;
 			}
 			if (buttons[2]) {
 				Debug.Log("Third button pressed");

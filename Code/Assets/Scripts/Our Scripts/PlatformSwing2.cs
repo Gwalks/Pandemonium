@@ -5,13 +5,17 @@ public class PlatformSwing2 : MonoBehaviour {
 	public float speed;
 	public float totalTime;
 	public float powerNumber;
+
+
 	private int counter = 0;
 	private float startTime;
 	Vector3 pos;
+	Vector3 startPos;
 	// Use this for initialization
 	void Start () {
-		pos = transform.position;
+		startPos = pos = transform.position;
 		startTime = totalTime;
+
 	}
 	
 	// Update is called once per frame
@@ -33,13 +37,14 @@ public class PlatformSwing2 : MonoBehaviour {
 		}
 		else {
 			totalTime = startTime;
+			pos = startPos;
 		}
 
 		// movements
 		Move (counter);
 
-		Debug.Log ("total time " + totalTime);
-		Debug.Log ("counter " + counter);
+	//	Debug.Log ("total time " + totalTime);
+	//	Debug.Log ("counter " + counter);
 	}
 
 	private float nSquare(float n) {

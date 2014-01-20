@@ -12,8 +12,9 @@ public class Level1Uni2 : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
 		player.SetActive(false);
-		particles = GameObject.FindGameObjectWithTag("TransportParticles");
+        particles = GameObject.Find("Sparkle Rising");
 		camera = GameObject.FindGameObjectWithTag("MainCamera");
+		camera.GetComponent<MoveCamera>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +27,8 @@ public class Level1Uni2 : MonoBehaviour {
 			Destroy(particles);
 			camera.GetComponent<MoveCamera>().enabled = true;
 		}
+		if (Input.GetKeyUp(KeyCode.Escape))
+			Application.LoadLevel("Start");
 	
 	}
 }

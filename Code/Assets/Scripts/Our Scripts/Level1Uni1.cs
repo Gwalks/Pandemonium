@@ -22,7 +22,10 @@ public class Level1Uni1 : MonoBehaviour {
 	void Update () {
 		if(!pauseTimer)
 			levelTime -= Time.deltaTime;
-		if(Input.GetKeyDown(KeyCode.LeftAlt)){GrantCode();}
+		if(Input.GetKeyDown(KeyCode.LeftAlt)){GrantCode();} //dammit grant - Tyler
+		if (Input.GetKeyUp(KeyCode.Escape))
+			Application.LoadLevel("Start");
+
 	}
 
 	void OnGUI() {
@@ -62,6 +65,7 @@ public class Level1Uni1 : MonoBehaviour {
 	public void PauseTimer()
 	{
 		pauseTimer = true;
+		Debug.Log ("True");
 	}
 
 	public void UnPauseTimer()

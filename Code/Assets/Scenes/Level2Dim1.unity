@@ -199,7 +199,7 @@ GameObject:
   - 114: {fileID: 13193687}
   m_Layer: 0
   m_Name: Level
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,6 +322,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 28626814}
   - 212: {fileID: 28626813}
+  - 61: {fileID: 28626816}
+  - 114: {fileID: 28626815}
   m_Layer: 0
   m_Name: Sloth
   m_TagString: Untagged
@@ -363,6 +365,35 @@ Transform:
   m_LocalScale: {x: .411538363, y: .411538363, z: .411538363}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &28626815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28626812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723fd4ac6d3d60842a43d638bd616352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - "zzzzzZZZzzzzz\u2026"
+  - "Huh?! What? Oh, it\u2019s a Panda!"
+  - "*Yawn* Why\u2019d you wake me up, Panda? I was having such a nice dream\u2026"
+  - Hm?... Escape? Funny, I was actually dreaming of doing just that!
+  - "But I\u2019m too tired right now. I need to get a full 16 hours of sleep before
+    I can even think of trying something like that."
+--- !u!61 &28626816
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28626812}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 22, y: 14}
+  m_Center: {x: 0, y: -1}
 --- !u!1001 &32394257
 Prefab:
   m_ObjectHideFlags: 0
@@ -10133,6 +10164,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1553059053}
   - 212: {fileID: 1553059052}
+  - 61: {fileID: 1553059055}
+  - 114: {fileID: 1553059054}
   m_Layer: 0
   m_Name: Sloth
   m_TagString: Untagged
@@ -10174,6 +10207,31 @@ Transform:
   m_LocalScale: {x: .411538363, y: .411538363, z: .411538363}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1553059054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553059051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723fd4ac6d3d60842a43d638bd616352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - zzzZZZzzz... DERP?!
+  - Derpitur-derp? DERP DERP! zzzZZZzzz...
+--- !u!61 &1553059055
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553059051}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 22, y: 12.000001}
+  m_Center: {x: -1, y: 0}
 --- !u!1001 &1562297778
 Prefab:
   m_ObjectHideFlags: 0

@@ -106,17 +106,14 @@ MonoBehaviour:
   - {fileID: 933623443}
   - {fileID: 803503413}
   frame1:
-  - This
-  - Is
-  - A
+  - Hi
+  - aw
+  - asd
+  - asdqwae
   frame2:
-  - Test
-  - Of
-  - The
+  - Frame 2 1
   frame3:
-  - Story
-  - Board
-  - Frames
+  - Frame 33
   temp: []
 --- !u!4 &197495746
 Transform:
@@ -152,7 +149,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275624733}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: b5be447fb63f4cd46a3deefd0ed19779, type: 3}
+  m_Texture: {fileID: 2800000, guid: 58d137b765a666247bd53ca2355b7243, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .501960814}
   m_PixelInset:
     serializedVersion: 2
@@ -171,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275624733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .540000021, y: .5, z: 3.19049549}
+  m_LocalPosition: {x: .540000021, y: .5, z: 3}
   m_LocalScale: {x: .99000001, y: .920000017, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -278,7 +275,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803503412}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: bf0dca36ff4f1b341b3886c131141aad, type: 3}
+  m_Texture: {fileID: 2800000, guid: 554b67fe7084e7a40bd08ef684c55736, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -297,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803503412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalPosition: {x: .5, y: .5, z: 1}
   m_LocalScale: {x: .99000001, y: .920000017, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -324,7 +321,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933623442}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 2ad6fb369409a7c49997d84014d0f25b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9e5d3cd3d5f1e1346b433956cd77732d, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -343,7 +340,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933623442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalPosition: {x: .5, y: .5, z: 2}
   m_LocalScale: {x: .99000001, y: .920000017, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

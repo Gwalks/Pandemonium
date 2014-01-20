@@ -24,7 +24,10 @@ public class AISight : MonoBehaviour {
 	{
 		anim.SetInteger("Transition",3);
 		Rigidbody2D clone = (Rigidbody2D) Instantiate(bullet, transform.position, Quaternion.identity);
-		clone.velocity = Vector2.right * bulletSpeed * (int)transform.parent.GetComponent<AIMovement>().GetDirection();
+		int direction = (int)transform.parent.GetComponent<AIMovement>().GetDirection();
+		clone.velocity = Vector2.right * bulletSpeed * direction;
+		if(direction == 1)
+			clone.GetComponent<Bullet>().Flip();
 		
 	}
 

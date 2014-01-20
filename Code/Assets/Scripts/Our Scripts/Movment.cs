@@ -13,6 +13,9 @@ public class Movment : MonoBehaviour {
 	bool isGrounded;
 	private bool keyboardEnable = true;
 	Animator anim;
+
+	bool teleporting;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -20,6 +23,7 @@ public class Movment : MonoBehaviour {
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
 		jump = KeyCode.Space;
+		teleporting = false;
 	}
 
 	public void setKeyboardEnableFalse() {
@@ -34,7 +38,7 @@ public class Movment : MonoBehaviour {
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
 		if (keyboardEnable) {
-			if(isGrounded)
+			if(isGrounded && !teleporting)
 			{
 				if (Input.GetKey(leftKey)) 
 				{
@@ -114,6 +118,11 @@ public class Movment : MonoBehaviour {
 
 		}
 		//Debug.Log(z);
+	}
+
+	public void IsTelePorting()
+	{
+		teleporting = true;
 	}
 
 }

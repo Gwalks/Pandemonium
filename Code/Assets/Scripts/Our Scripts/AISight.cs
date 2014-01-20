@@ -11,7 +11,7 @@ public class AISight : MonoBehaviour {
 
 	void Start()
 	{
-		anim = GetComponent<Animator>();
+		anim = transform.parent.GetComponent<Animator>();
 	}
 
 	void Update()
@@ -24,9 +24,7 @@ public class AISight : MonoBehaviour {
 	{
 		anim.SetInteger("Transition",3);
 		Rigidbody2D clone = (Rigidbody2D) Instantiate(bullet, transform.position, Quaternion.identity);
-		clone.velocity = Vector2.right * bulletSpeed * (int)transform.GetComponent<AIMovement>().GetDirection();
-
-		Debug.Log(clone.velocity + ": " + (int)transform.GetComponent<AIMovement>().GetDirection() );
+		clone.velocity = Vector2.right * bulletSpeed * (int)transform.parent.GetComponent<AIMovement>().GetDirection();
 		
 	}
 

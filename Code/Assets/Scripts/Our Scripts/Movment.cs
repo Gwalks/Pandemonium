@@ -11,8 +11,11 @@ public class Movment : MonoBehaviour {
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-	private bool keyboardEnable;
+	private bool keyboardEnable = true;
 	Animator anim;
+
+	bool teleporting;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -20,14 +23,22 @@ public class Movment : MonoBehaviour {
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
 		jump = KeyCode.Space;
+		teleporting = false;
 	}
-	
+
+	public void setKeyboardEnableFalse() {
+		keyboardEnable = false;
+	}
+
+	public void setKeyboardEnableTrue() {
+		keyboardEnable = true;
+	}
 	// Update is called once per frame
 	void Update () {
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
 		if (keyboardEnable) {
-			if(isGrounded)
+			if(isGrounded && !teleporting)
 			{
 				if (Input.GetKey(leftKey)) 
 				{
@@ -84,11 +95,6 @@ public class Movment : MonoBehaviour {
 			}
 			Debug.Log(rigidbody2D.velocity.y.ToString());
 		}
-		else {
-			float z = Input.GetAxis("Vertical");
-			if (z == 0)
-				keyboardEnable = true;
-		}
 	}
 
 	void Flip() {
@@ -112,6 +118,11 @@ public class Movment : MonoBehaviour {
 
 		}
 		//Debug.Log(z);
+	}
+
+	public void IsTelePorting()
+	{
+		teleporting = true;
 	}
 
 }

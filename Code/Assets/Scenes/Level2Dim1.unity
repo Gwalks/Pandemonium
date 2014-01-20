@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfKeys: 1
-  levelName: 
-  levelTime: 100
+  levelName: Level1Dim2
+  levelTime: 25
   gwalks: {fileID: 0}
 --- !u!4 &13193688
 Transform:
@@ -1385,8 +1385,9 @@ GameObject:
   - 4: {fileID: 278244658}
   - 95: {fileID: 986215724}
   - 114: {fileID: 278244661}
-  - 61: {fileID: 986215722}
   - 50: {fileID: 986215721}
+  - 58: {fileID: 278244663}
+  - 58: {fileID: 278244662}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Player
@@ -1465,6 +1466,30 @@ MonoBehaviour:
   facingRight: 1
   speed: 10
   jumpSpeed: 25
+--- !u!58 &278244662
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 96a36498fdcbb7a4ca63db2552dfe7cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 828349738}
+  m_GameObject: {fileID: 278244657}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1.63
+  m_Center: {x: -.0900000036, y: 1.71000004}
+--- !u!58 &278244663
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800002, guid: 96a36498fdcbb7a4ca63db2552dfe7cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 828349738}
+  m_GameObject: {fileID: 278244657}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 2.1099999
+  m_Center: {x: -.25, y: -1.01999998}
 --- !u!1 &291241867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,18 +4890,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &986215722
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 96a36498fdcbb7a4ca63db2552dfe7cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 828349738}
-  m_GameObject: {fileID: 278244657}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 4.86999989, y: 6.36999989}
-  m_Center: {x: 0, y: -0}
 --- !u!114 &986215723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5128,7 +5141,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 2.22000003
       maxCurve:
         serializedVersion: 2
         m_Curve:

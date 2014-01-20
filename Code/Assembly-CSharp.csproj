@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\PlatformSwing2.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\SlowCharacter.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\StoryScript.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\TextBox.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />

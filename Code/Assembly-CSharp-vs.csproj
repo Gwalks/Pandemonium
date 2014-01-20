@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\Movment.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\NetObstacle.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\NetTrigger.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\ParticleEffectExit.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlatformMove.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlatformSwing.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlatformSwing2.cs" />

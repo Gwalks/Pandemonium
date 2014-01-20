@@ -65,6 +65,7 @@ public class Level1Uni1 : MonoBehaviour {
 	public void PauseTimer()
 	{
 		pauseTimer = true;
+		Debug.Log ("True");
 	}
 
 	public void UnPauseTimer()

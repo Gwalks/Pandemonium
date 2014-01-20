@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
+	public AudioClip doorOpen;
+	public AudioClip doorLocked;
 	public GameObject level;
 	public int doorNum;
 	public string nextLevel;
@@ -24,6 +26,7 @@ public class Door : MonoBehaviour {
 			gameObject.active = false; 
 		}*/
 		if (col.gameObject.tag == "Player" && Input.GetKeyUp(KeyCode.E)) {
+			audio.PlayOneShot(doorOpen);
 			Application.LoadLevel(nextLevel);
 		}
 

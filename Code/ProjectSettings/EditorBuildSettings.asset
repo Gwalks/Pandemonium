@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level.unity
   - enabled: 1
     path: Assets/Scenes/Level1Dim2.unity
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Testing Level.unity

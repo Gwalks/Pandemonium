@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   speed: 10
-  jumpSpeed: 25
+  jumpSpeed: 15
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

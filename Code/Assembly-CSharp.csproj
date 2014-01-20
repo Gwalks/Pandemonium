@@ -70,8 +70,12 @@
      <Compile Include="Assets\Scripts\Our Scripts\PlatformMove.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlatformSwing.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\PlayButton.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\SavePosition.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\SceneObject.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\TeleportEffect.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\TextBox.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\Win.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />

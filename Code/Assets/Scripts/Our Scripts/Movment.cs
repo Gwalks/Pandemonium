@@ -12,6 +12,9 @@ public class Movment : MonoBehaviour {
 	public int jumpSpeed = 10;
 	bool isGrounded;
 	Animator anim;
+
+	bool teleporting;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -19,13 +22,16 @@ public class Movment : MonoBehaviour {
 		leftKey = KeyCode.A;
 		rightKey = KeyCode.D;
 		jump = KeyCode.Space;
+
+		teleporting = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
-		if(isGrounded)
+		if(isGrounded && !teleporting)
 		{
 			if (Input.GetKey(leftKey)) 
 			{
@@ -34,7 +40,7 @@ public class Movment : MonoBehaviour {
 				temp.x = speed*-1;
 				rigidbody2D.velocity = temp;
 			}
-			if (Input.GetKey(rightKey)) 
+			else if (Input.GetKey(rightKey)) 
 			{
 				anim.SetInteger("WalkTransition",1);
 				Vector2 temp = rigidbody2D.velocity;
@@ -82,6 +88,12 @@ public class Movment : MonoBehaviour {
 		//Debug.Log(rigidbody2D.velocity.y.ToString());
 	}
 
+	void OnCollisionStay2D(Collision2D other) {
+
+
+
+	}
+
 	void Flip() {
 		facingRight = !facingRight;
 		
@@ -89,6 +101,11 @@ public class Movment : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public void IsTelePorting()
+	{
+		teleporting = true;
 	}
 
 }

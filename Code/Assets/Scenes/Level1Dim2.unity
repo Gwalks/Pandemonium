@@ -7350,7 +7350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1500004, guid: 5692846c5ce8f4ee08ef64bec4aad0bd, type: 2}
       propertyPath: maxSize
-      value: 1.76999998
+      value: 25.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 1500002, guid: 5692846c5ce8f4ee08ef64bec4aad0bd, type: 2}
       propertyPath: maxSize
@@ -7375,6 +7375,10 @@ Prefab:
     - target: {fileID: 1500004, guid: 5692846c5ce8f4ee08ef64bec4aad0bd, type: 2}
       propertyPath: rndAngularVelocity
       value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500004, guid: 5692846c5ce8f4ee08ef64bec4aad0bd, type: 2}
+      propertyPath: minSize
+      value: 2.1099999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5692846c5ce8f4ee08ef64bec4aad0bd, type: 2}
@@ -11479,8 +11483,8 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: .300000012
-  maxSize: 1.76999998
+  minSize: 2.1099999
+  maxSize: 25.4099998
   minEnergy: 3
   maxEnergy: 4.26000023
   minEmission: 5

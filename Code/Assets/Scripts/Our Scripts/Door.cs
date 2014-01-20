@@ -5,6 +5,7 @@ public class Door : MonoBehaviour {
 
 	public GameObject level;
 	public int doorNum;
+	public string nextLevel;
 	
 	public Door(int num)
 	{
@@ -16,12 +17,16 @@ public class Door : MonoBehaviour {
 		return doorNum;
 	}
 
-	void OnCollisionEnter2D(Collision2D col)
+	void OnTriggerStay2D(Collider2D col)
 	{
-		if( col.gameObject.tag == "Player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
+		/*if( col.gameObject.tag == "Player" && level.GetComponent<Level1Uni1>().CheckDoor(doorNum))
 		{
 			gameObject.active = false; 
+		}*/
+		if (col.gameObject.tag == "Player" && Input.GetKeyUp(KeyCode.E)) {
+			Application.LoadLevel(nextLevel);
 		}
+
 	}
 
 

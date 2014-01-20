@@ -74,6 +74,61 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &197495744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 197495746}
+  - 114: {fileID: 197495745}
+  m_Layer: 0
+  m_Name: Story
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &197495745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197495744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7df3ff210c77e40b2264c4aa05ee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gt:
+  - {fileID: 275624734}
+  - {fileID: 933623443}
+  - {fileID: 803503413}
+  frame1:
+  - This
+  - Is
+  - A
+  frame2:
+  - Test
+  - Of
+  - The
+  frame3:
+  - Story
+  - Board
+  - Frames
+  temp: []
+--- !u!4 &197495746
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197495744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &275624733
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,10 +138,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 275624735}
   - 131: {fileID: 275624734}
-  - 114: {fileID: 275624736}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Story1
-  m_TagString: FirstStory
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,17 +175,6 @@ Transform:
   m_LocalScale: {x: .99000001, y: .920000017, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &275624736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 275624733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7df3ff210c77e40b2264c4aa05ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &588784129
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +266,7 @@ GameObject:
   - 131: {fileID: 803503413}
   m_Layer: 0
   m_Name: Story3
-  m_TagString: ThirdStory
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,10 +310,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 933623444}
   - 131: {fileID: 933623443}
-  - 114: {fileID: 933623445}
   m_Layer: 0
   m_Name: Story2
-  m_TagString: SecondStory
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,14 +347,3 @@ Transform:
   m_LocalScale: {x: .99000001, y: .920000017, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &933623445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 933623442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7df3ff210c77e40b2264c4aa05ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

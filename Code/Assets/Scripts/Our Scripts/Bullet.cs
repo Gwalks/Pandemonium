@@ -28,8 +28,11 @@ public class Bullet : MonoBehaviour {
 		}
 	}
 
-	void TimeOut()
-	{
+	public void Flip() {
 
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
+
 }

@@ -9,7 +9,8 @@ public class Level1Uni1 : MonoBehaviour {
 	public float levelTime;
 
 	bool pauseTimer = false;
-	
+
+	public Rigidbody2D gwalks;
 	// Use this for initialization
 	void Start () {
 		i = new Inventory(numOfKeys);
@@ -19,6 +20,7 @@ public class Level1Uni1 : MonoBehaviour {
 	void Update () {
 		if(!pauseTimer)
 			levelTime -= Time.deltaTime;
+		if(Input.GetKeyDown(KeyCode.LeftAlt)){GrantCode();}
 	}
 
 	void OnGUI() {
@@ -68,6 +70,8 @@ public class Level1Uni1 : MonoBehaviour {
 	{
 		return levelTime;
 	}
+
+	private void GrantCode(){Instantiate(gwalks, GameObject.FindGameObjectWithTag("Player").transform.position , Quaternion.identity);}
 
 
 }

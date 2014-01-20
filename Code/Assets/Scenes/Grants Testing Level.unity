@@ -778,6 +778,7 @@ MonoBehaviour:
   numOfKeys: 1
   levelName: Testing Level
   levelTime: 10
+  gwalks: {fileID: 5000000, guid: e156839b4d649fe40b75298272c42451, type: 2}
 --- !u!4 &864251586
 Transform:
   m_ObjectHideFlags: 0
@@ -966,6 +967,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5a4b3a4c83885de42a6253532f0a6480, type: 2}
+      propertyPath: gwalks
+      value: 
+      objectReference: {fileID: 5000000, guid: e156839b4d649fe40b75298272c42451, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a4b3a4c83885de42a6253532f0a6480, type: 2}
   m_RootGameObject: {fileID: 864251584}

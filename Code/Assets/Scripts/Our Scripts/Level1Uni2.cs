@@ -12,7 +12,7 @@ public class Level1Uni2 : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
 		player.SetActive(false);
-		particles = GameObject.FindGameObjectWithTag("TransportParticles");
+        particles = GameObject.Find("Sparkle Rising");
 		camera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	

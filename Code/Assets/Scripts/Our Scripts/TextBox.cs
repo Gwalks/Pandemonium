@@ -11,7 +11,7 @@ public class TextBox : MonoBehaviour {
 
 	void OnGUI() {
 		if (showText && textIndex != text.Length){
-			GUI.Box(new Rect(guiTextBoxLoc.x,guiTextBoxLoc.y,Screen.width,Screen.height/8),text[textIndex]);
+			GUI.Box(new Rect(guiTextBoxLoc.x,guiTextBoxLoc.y,Screen.width,(Screen.height*7)/8),text[textIndex]);
 		}
 		if(textIndex >= text.Length)
 			GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().UnPauseTimer();

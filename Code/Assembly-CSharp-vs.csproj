@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Level1Uni1.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\Level1Uni2.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Movment.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\NetObstacle.cs" />

@@ -5,7 +5,7 @@ public class Door : MonoBehaviour {
 
 	public GameObject level;
 	public int doorNum;
-	public int sceneNumber;
+	public string nextLevel;
 	
 	public Door(int num)
 	{
@@ -24,7 +24,7 @@ public class Door : MonoBehaviour {
 			gameObject.active = false; 
 		}*/
 		if (col.gameObject.tag == "Player" && Input.GetKeyUp(KeyCode.E)) {
-			Application.LoadLevel(sceneNumber);
+			Application.LoadLevel(nextLevel);
 		}
 
 	}

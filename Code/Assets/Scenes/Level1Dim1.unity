@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 890508103}
   doorNum: 1
-  sceneNumber: 0
+  nextLevel: Level2Dim1
 --- !u!212 &113078772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 113078770}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 7.55000019, y: 5.19999981}
   m_Center: {x: 0, y: 0}
 --- !u!1001 &206809692
@@ -2329,6 +2329,14 @@ Prefab:
       propertyPath: doorNum
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f8b1265c020cd884e89b9577f7bba12b, type: 2}
+      propertyPath: nextLevel
+      value: Level2Dim1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: f8b1265c020cd884e89b9577f7bba12b, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8b1265c020cd884e89b9577f7bba12b, type: 2}
   m_RootGameObject: {fileID: 113078770}
@@ -3108,7 +3116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfKeys: 1
   levelName: Level1Dim2
-  levelTime: 10
+  levelTime: 30
   gwalks: {fileID: 0}
 --- !u!4 &890508105
 Transform:

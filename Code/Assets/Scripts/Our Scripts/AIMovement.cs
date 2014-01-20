@@ -89,7 +89,7 @@ public class AIMovement : MonoBehaviour {
 
 	void MoveAI()
 	{
-		anim.SetInteger("Transition", 1);
+		//anim.SetInteger("Transition", 1);
 		temp = rigidbody2D.velocity;
 		temp.x = (float)p * pacingSpeed;
 		rigidbody2D.velocity = temp;
@@ -97,7 +97,7 @@ public class AIMovement : MonoBehaviour {
 
 	void PauseAI()
 	{
-		anim.SetInteger("Transition", 0);
+		//anim.SetInteger("Transition", 0);
 		temp = rigidbody2D.velocity;
 		temp.x = (float)PacingDirection.center * pacingSpeed;
 		rigidbody2D.velocity = temp;

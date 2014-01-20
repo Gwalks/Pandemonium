@@ -19,10 +19,6 @@ public class Level1Uni1 : MonoBehaviour {
 	void Update () {
 		if(!pauseTimer)
 			levelTime -= Time.deltaTime;
-		if(levelTime <= 0)
-		{
-			ChangeLevel ();
-		}
 	}
 
 	void OnGUI() {
@@ -54,7 +50,7 @@ public class Level1Uni1 : MonoBehaviour {
 	void ChangeLevel()
 	{
 		Debug.Log("Change Level");
-		//Application.LoadLevel(levelName);
+		//Application.LoadLevel(levelName);s
 	}
 
 	public void PauseTimer()
@@ -66,5 +62,12 @@ public class Level1Uni1 : MonoBehaviour {
 	{
 		pauseTimer = false;
 	}
+
+
+	public float GetTimer()
+	{
+		return levelTime;
+	}
+
 
 }

@@ -435,7 +435,7 @@ Transform:
   m_PrefabInternal: {fileID: 506915611}
   m_GameObject: {fileID: 113078770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.807786, y: -7.21148729, z: 0}
+  m_LocalPosition: {x: 12.807786, y: -7.21148729, z: 5.37519073}
   m_LocalScale: {x: .721078157, y: .721078157, z: .721078157}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2303,7 +2303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f8b1265c020cd884e89b9577f7bba12b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.37519073
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f8b1265c020cd884e89b9577f7bba12b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfKeys: 1
   levelName: Level1Dim2
-  levelTime: 30
+  levelTime: 10
   gwalks: {fileID: 0}
 --- !u!4 &890508105
 Transform:

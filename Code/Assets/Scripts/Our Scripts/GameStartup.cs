@@ -5,7 +5,7 @@ public class GameStartup : MonoBehaviour {
 
 	// Use this for initialization
 	//public GUITexture menuScreen;
-	private string [] buttonNames= {"Play","Help","Exit"};
+	private string [] buttonNames= {"Play","Help","Exit","Back"};
 	private bool[] buttons;
 	private GameObject helpTexture;
 	private bool helpActive = false;
@@ -45,8 +45,31 @@ public class GameStartup : MonoBehaviour {
 
 	void OnGUI()
 	{
+		if (helpActive) {
+			/*GUI.SetNextControlName(buttonNames[3]);
+			buttons[3] = GUI.Button (new Rect((Screen.width*5)/8,250,350,50),buttonNames[3]);
+			
+			if (Input.GetKeyUp(KeyCode.Return)) {
+				Vector3 temp = helpTexture.transform.position;
+				temp.z = 0;
+				helpTexture.transform.position = temp;
+				helpActive = false;
+				buttons[3] = false;
+			}
+			
+			if (buttons[3]) {
+				Vector3 temp = helpTexture.transform.position;
+				temp.z = 0;
+				helpTexture.transform.position = temp;
+				helpActive = false;
+				Debug.Log("GOBACK");
+				buttons[3] = false;
+			}
+			GUI.FocusControl(buttonNames[3]);*/
+		}
+
 		if (!helpActive && !exitActive) {
-			for (int i = 0; i < buttonNames.Length; i++) 
+			for (int i = 0; i < buttonNames.Length - 1; i++) 
 			{
 				GUI.SetNextControlName(buttonNames[i]);
 				//buttons[i] = GUI.Button(new Rect(Screen.width - 100,70 + (20 * i), 80, 20),buttonNames[i]);
@@ -73,26 +96,25 @@ public class GameStartup : MonoBehaviour {
 			Debug.Log(currentSelection);
 			GUI.FocusControl(buttonNames[currentSelection]);
 		}
-		if (helpActive) {
-		
-		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp(KeyCode.S)) {
-			if (currentSelection < buttons.Length-1) {
-				currentSelection++;
+		if (!helpActive && !exitActive) {
+			if (Input.GetKeyUp(KeyCode.S)) {
+				if (currentSelection < buttons.Length-1) {
+					currentSelection++;
+				}
+				else 
+					currentSelection = buttons.Length-1;
 			}
-			else 
-				currentSelection = buttons.Length-1;
-		}
-		if (Input.GetKeyUp(KeyCode.W)) {
-			if (currentSelection > 0) {
-				currentSelection--;
-			}
-			else {
-				currentSelection = 0;
+			if (Input.GetKeyUp(KeyCode.W)) {
+				if (currentSelection > 0) {
+					currentSelection--;
+				}
+				else {
+					currentSelection = 0;
+				}
 			}
 		}
 	}

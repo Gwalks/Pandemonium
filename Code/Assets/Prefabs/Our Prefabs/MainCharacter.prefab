@@ -92,8 +92,9 @@ GameObject:
   - 4: {fileID: 400010}
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400002}
-  - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 58: {fileID: 5800002}
+  - 58: {fileID: 5800000}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Player
@@ -124,8 +125,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.335264832, y: -.322878987, z: -32.4532089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .55301255, y: .609322548, z: -12.6124573}
   m_LocalScale: {x: 1.87409723, y: 1.87409687, z: 1.87409687}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -180,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.1195602, y: 3.04523516, z: 7.31671429}
+  m_LocalPosition: {x: -26.6258659, y: 11.7565689, z: 7.31671429}
   m_LocalScale: {x: .533590257, y: .533590257, z: .533590257}
   m_Children:
   - {fileID: 400008}
@@ -216,8 +217,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!58 &5800000
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -225,8 +226,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.86999989, y: 6.36999989}
-  m_Center: {x: 0, y: -0}
+  m_Radius: 1.63
+  m_Center: {x: -.0900000036, y: 1.71000004}
+--- !u!58 &5800002
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 2.1099999
+  m_Center: {x: -.25, y: -1.01999998}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -458,7 +470,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 2.22000003
       maxCurve:
         serializedVersion: 2
         m_Curve:

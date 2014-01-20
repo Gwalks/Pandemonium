@@ -11,7 +11,7 @@ public class Movment : MonoBehaviour {
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-	private bool keyboardEnable;
+	private bool keyboardEnable = true;
 	Animator anim;
 
 	bool teleporting;
@@ -31,7 +31,7 @@ public class Movment : MonoBehaviour {
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
 		if (keyboardEnable) {
-			if(isGrounded && teleporting)
+			if(isGrounded && !teleporting)
 			{
 				if (Input.GetKey(leftKey)) 
 				{

@@ -50,7 +50,7 @@ public class Level1Uni1 : MonoBehaviour {
 	void ChangeLevel()
 	{
 		Debug.Log("Change Level");
-		//Application.LoadLevel(levelName);s
+		Application.LoadLevel(levelName);
 	}
 
 	public void PauseTimer()

@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class AIDeath : MonoBehaviour {
-	
+	public AudioClip death;
+	public AudioClip dropKey;
 	class Key
 	{	
 		int keyNum;
@@ -40,8 +41,10 @@ public class AIDeath : MonoBehaviour {
 		{
 			if(hasKey)
 			{
+				audio.PlayOneShot(dropKey);
 				level.SendMessage("AddKey", k.GetKeyNum());
 			}
+			audio.PlayOneShot(death);
 			enemy.gameObject.active = false;
 		}
 	}

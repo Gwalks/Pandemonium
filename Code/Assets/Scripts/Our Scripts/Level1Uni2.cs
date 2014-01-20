@@ -14,6 +14,7 @@ public class Level1Uni2 : MonoBehaviour {
 		player.SetActive(false);
         particles = GameObject.Find("Sparkle Rising");
 		camera = GameObject.FindGameObjectWithTag("MainCamera");
+		camera.GetComponent<MoveCamera>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +27,8 @@ public class Level1Uni2 : MonoBehaviour {
 			Destroy(particles);
 			camera.GetComponent<MoveCamera>().enabled = true;
 		}
+		if (Input.GetKeyUp(KeyCode.Escape))
+			Application.LoadLevel("Start");
 	
 	}
 }

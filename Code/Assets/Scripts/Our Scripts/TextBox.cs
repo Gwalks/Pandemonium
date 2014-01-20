@@ -13,6 +13,8 @@ public class TextBox : MonoBehaviour {
 		if (showText && textIndex != text.Length){
 			GUI.Box(new Rect(guiTextBoxLoc.x,guiTextBoxLoc.y,Screen.width,Screen.height/8),text[textIndex]);
 		}
+		if(textIndex >= text.Length)
+			GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().UnPauseTimer();
 	}
 	// Use this for initialization
 	void Start () {
@@ -31,12 +33,20 @@ public class TextBox : MonoBehaviour {
 		Debug.Log(textIndex);
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerStay2D(Collider2D other) {
 		//Debug.Log ("Bacon");
 		if (Input.GetKeyUp(KeyCode.E) && other.gameObject.tag == "Player") {
 			showText = true;
 			Debug.Log ("Bacon");
+			GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().PauseTimer();
 		}
+
+	}
+
+	void OnTriggerExit2D(Collider2D col)
+	{
+		GameObject.FindGameObjectWithTag("Level").GetComponent<Level1Uni1>().UnPauseTimer();
+		showText = false;
 
 	}
 

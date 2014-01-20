@@ -8,10 +8,11 @@ public class AIMovement : MonoBehaviour {
 	
 	public float timeToPace;
 	public float timeToPause;
-	public bool facingRight = true;
+	public bool facingRight = false;
 	bool pause;
 	float paceTimer;
 	float pauseTimer;
+	Animator anim;
 
 	public enum PacingDirection
 	{
@@ -20,13 +21,14 @@ public class AIMovement : MonoBehaviour {
 		right = 1
 	}
 	
-	PacingDirection p = PacingDirection.right;
+	PacingDirection p = PacingDirection.left;
 	
 	// Use this for initialization
 	void Start () {
 		pause = false;
 		paceTimer = timeToPace;
 		pauseTimer = timeToPause;
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -45,13 +47,13 @@ public class AIMovement : MonoBehaviour {
 
 		if(paceTimer <= 0)
 		{
-			ChangeDirection();
+			PauseAI();
 			paceTimer = timeToPace;
 			pause = true;
 		}
 		if(pauseTimer <= 0)
 		{
-			PauseAI();
+			ChangeDirection();
 			pauseTimer = timeToPause;
 			pause = false;
 		}
@@ -81,10 +83,13 @@ public class AIMovement : MonoBehaviour {
 			break;
 		}
 
+		Flip();
+
 	}
 
 	void MoveAI()
 	{
+		anim.SetInteger("Transition", 1);
 		temp = rigidbody2D.velocity;
 		temp.x = (float)p * pacingSpeed;
 		rigidbody2D.velocity = temp;
@@ -92,11 +97,10 @@ public class AIMovement : MonoBehaviour {
 
 	void PauseAI()
 	{
+		anim.SetInteger("Transition", 0);
 		temp = rigidbody2D.velocity;
 		temp.x = (float)PacingDirection.center * pacingSpeed;
 		rigidbody2D.velocity = temp;
-		
-		Flip();
 
 	}
 

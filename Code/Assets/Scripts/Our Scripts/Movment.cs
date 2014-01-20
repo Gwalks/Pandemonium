@@ -11,7 +11,7 @@ public class Movment : MonoBehaviour {
 	public float speed = 10;
 	public int jumpSpeed = 10;
 	bool isGrounded;
-	private bool keyboardEnable;
+	private bool keyboardEnable = true;
 	Animator anim;
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,14 @@ public class Movment : MonoBehaviour {
 		rightKey = KeyCode.D;
 		jump = KeyCode.Space;
 	}
-	
+
+	public void setKeyboardEnableFalse() {
+		keyboardEnable = false;
+	}
+
+	public void setKeyboardEnableTrue() {
+		keyboardEnable = true;
+	}
 	// Update is called once per frame
 	void Update () {
 		anim.SetInteger("WalkTransition",0);
@@ -83,11 +90,6 @@ public class Movment : MonoBehaviour {
 				anim.SetInteger("WalkTransition",2);
 			}
 			Debug.Log(rigidbody2D.velocity.y.ToString());
-		}
-		else {
-			float z = Input.GetAxis("Vertical");
-			if (z == 0)
-				keyboardEnable = true;
 		}
 	}
 

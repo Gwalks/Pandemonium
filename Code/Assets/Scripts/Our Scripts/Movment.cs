@@ -25,7 +25,14 @@ public class Movment : MonoBehaviour {
 		jump = KeyCode.Space;
 		teleporting = false;
 	}
-	
+
+	public void setKeyboardEnableFalse() {
+		keyboardEnable = false;
+	}
+
+	public void setKeyboardEnableTrue() {
+		keyboardEnable = true;
+	}
 	// Update is called once per frame
 	void Update () {
 		anim.SetInteger("WalkTransition",0);
@@ -87,11 +94,6 @@ public class Movment : MonoBehaviour {
 				anim.SetInteger("WalkTransition",2);
 			}
 			Debug.Log(rigidbody2D.velocity.y.ToString());
-		}
-		else {
-			float z = Input.GetAxis("Vertical");
-			if (z == 0)
-				keyboardEnable = true;
 		}
 	}
 

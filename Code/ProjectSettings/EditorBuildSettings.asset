@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level.unity
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+  - enabled: 1
     path: Assets/Scenes/HelpScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity

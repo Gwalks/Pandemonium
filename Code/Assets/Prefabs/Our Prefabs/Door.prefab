@@ -51,8 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c46834e43138a4c8e49119bd729d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 8300000, guid: ca2174c966cb7a144bb55cbcbeb4d0e0, type: 3}
+  doorLocked: {fileID: 8300000, guid: 976c7af09ec45f94cb21e60a6a4e5b2e, type: 3}
   level: {fileID: 0}
   doorNum: 0
+  nextLevel: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

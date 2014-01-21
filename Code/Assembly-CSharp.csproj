@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CreditScreen.cs" />
      <Compile Include="Assets\HelpScreen.cs" />
      <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\Scripts\Our Scripts\AIDeath.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\AIMovement.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\AISight.cs" />
+     <Compile Include="Assets\Scripts\Our Scripts\BackToMain.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Our Scripts\GameStartup.cs" />

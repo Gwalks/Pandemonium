@@ -53,7 +53,7 @@ public class Level1Uni1 : MonoBehaviour {
 
 	public void LoseGame()
 	{
-		Debug.Log("Game Over");
+		Application.LoadLevel("GameOver");
 	}
 
 	void ChangeLevel()

@@ -13,11 +13,13 @@ public class Movment : MonoBehaviour {
 	bool isGrounded;
 	private bool keyboardEnable = true;
 	Animator anim;
-
+	public AudioClip jumpClip;
+	public AudioClip tele;
 	bool teleporting;
 
 	// Use this for initialization
 	void Start () {
+		audio.volume = 1.0f;
 		anim = GetComponent<Animator>();
 		isGrounded = true;
 		leftKey = KeyCode.A;
@@ -37,7 +39,8 @@ public class Movment : MonoBehaviour {
 	void Update () {
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
-		if (keyboardEnable) {
+		if (keyboardEnable) 
+		{
 			if(isGrounded && !teleporting)
 			{
 				if (Input.GetKey(leftKey)) 
@@ -56,19 +59,21 @@ public class Movment : MonoBehaviour {
 				}
 				if(Input.GetKeyDown(jump))
 				{
+					audio.PlayOneShot(jumpClip);
 					anim.SetInteger("WalkTransition",2);
 					Vector2 temp = rigidbody2D.velocity;
 					temp.y = jumpSpeed;
 					rigidbody2D.velocity = temp;
 					isGrounded = false;
 				}
-				//if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
-				if (Input.GetKeyUp(jump))
+				if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 				{
+					audio.PlayOneShot(jumpClip);
 					anim.SetInteger("WalkTransition",2);
 					Vector2 temp = rigidbody2D.velocity;
 					temp.x = speed*0;
 					rigidbody2D.velocity = temp;
+
 				}
 				if (h > 0 && !facingRight) {
 					Flip();
@@ -86,14 +91,17 @@ public class Movment : MonoBehaviour {
 
 			}
 
-			if(rigidbody2D.velocity.y ==0)
+			if(rigidbody2D.velocity.y != 0.0f)
+				isGrounded = false;
+
+			if(rigidbody2D.velocity.y == 0.0f)
 			{
 				isGrounded = true;
 			}
 			else{
 				anim.SetInteger("WalkTransition",2);
 			}
-			Debug.Log(rigidbody2D.velocity.y.ToString());
+			//Debug.Log(rigidbody2D.velocity.y.ToString());
 		}
 	}
 
@@ -122,6 +130,7 @@ public class Movment : MonoBehaviour {
 
 	public void IsTelePorting()
 	{
+		audio.PlayOneShot(tele);
 		teleporting = true;
 	}
 

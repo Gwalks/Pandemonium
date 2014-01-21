@@ -56,7 +56,8 @@ public class StoryScript : MonoBehaviour {
 		{
 			Application.LoadLevel(2);	
 		}
-		temp = arr[frameIndex];
+		else
+			temp = arr[frameIndex];
 		if(Input.GetKeyUp(KeyCode.Return))
 		{
 			stringIndex++;

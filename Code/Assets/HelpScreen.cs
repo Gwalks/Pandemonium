@@ -27,7 +27,7 @@ public class HelpScreen : MonoBehaviour {
 	void OnGUI() {
 		string backText = "Back";
 		GUI.SetNextControlName(backText);
-		bool backButton = GUI.Button(new Rect((Screen.width*5)/8,(Screen.height*7)/8,350,50),backText);
+		bool backButton = GUI.Button(new Rect((Screen.width*5)/8,70,350,50),backText);
 
 		if (Input.GetKeyUp(KeyCode.Return))
 			backButton = true;

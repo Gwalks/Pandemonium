@@ -39,7 +39,8 @@ public class Movment : MonoBehaviour {
 	void Update () {
 		anim.SetInteger("WalkTransition",0);
 		float h = Input.GetAxis("Horizontal");
-		if (keyboardEnable) {
+		if (keyboardEnable) 
+		{
 			if(isGrounded && !teleporting)
 			{
 				if (Input.GetKey(leftKey)) 
@@ -65,14 +66,14 @@ public class Movment : MonoBehaviour {
 					rigidbody2D.velocity = temp;
 					isGrounded = false;
 				}
-				//if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
-				if (Input.GetKeyUp(jump))
+				if (Input.GetKeyUp(jump) || Input.GetKeyUp(rightKey) || Input.GetKeyUp(leftKey))
 				{
 					audio.PlayOneShot(jumpClip);
 					anim.SetInteger("WalkTransition",2);
 					Vector2 temp = rigidbody2D.velocity;
 					temp.x = speed*0;
 					rigidbody2D.velocity = temp;
+
 				}
 				if (h > 0 && !facingRight) {
 					Flip();
@@ -90,7 +91,10 @@ public class Movment : MonoBehaviour {
 
 			}
 
-			if(rigidbody2D.velocity.y ==0)
+			if(rigidbody2D.velocity.y != 0.0f)
+				isGrounded = false;
+
+			if(rigidbody2D.velocity.y == 0.0f)
 			{
 				isGrounded = true;
 			}

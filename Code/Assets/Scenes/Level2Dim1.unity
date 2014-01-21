@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfKeys: 1
-  levelName: Level1Dim2
+  levelName: Level2Dim2
   levelTime: 25
   gwalks: {fileID: 0}
 --- !u!4 &13193688

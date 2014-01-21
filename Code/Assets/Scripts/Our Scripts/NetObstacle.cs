@@ -15,12 +15,13 @@ public class NetObstacle : MonoBehaviour {
 	void Update () {
 		if (caught) {
 			if (Input.GetKeyDown(KeyCode.Space) && count == 0) {
-				player.GetComponent<Movment>().setKeyboardEnableTrue();
+				player.GetComponent<ScrollingMovment>().setKeyboardEnableTrue();
 				NetTrigger temp2 = this.gameObject.GetComponentInChildren(typeof(NetTrigger)) as NetTrigger;
 				temp2.setActivatedTrue();
 				caught = false;
 				count++;
 			}
+			Debug.Log(count);
 		}
 
 	}
@@ -34,7 +35,7 @@ public class NetObstacle : MonoBehaviour {
 			currentVelocity = other.rigidbody2D.velocity;
 			Vector2 temp = Vector2.zero;
 			other.rigidbody2D.velocity = temp;
-			other.GetComponent<Movment>().setKeyboardEnableFalse();
+			other.GetComponent<ScrollingMovment>().setKeyboardEnableFalse();
 			player = other.gameObject;
 			NetTrigger temp2 = this.gameObject.GetComponentInChildren(typeof(NetTrigger)) as NetTrigger;
 			temp2.setActivatedFalse();

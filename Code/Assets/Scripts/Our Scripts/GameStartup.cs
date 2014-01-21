@@ -5,7 +5,7 @@ public class GameStartup : MonoBehaviour {
 
 	// Use this for initialization
 	//public GUITexture menuScreen;
-	private string [] buttonNames= {"Play","Help","Exit"};
+	private string [] buttonNames= {"Play","Help","Credits","Exit"};
 	private bool[] buttons;
 	private GameObject helpTexture;
 	private GameObject mainScreen;
@@ -61,7 +61,7 @@ public class GameStartup : MonoBehaviour {
 			}
 			
 			if (buttons[0]) {
-				Application.LoadLevel("Level1Dim1");
+				Application.LoadLevel("Story");
 			}
 			if (buttons[1]) {
 				Debug.Log("Second button pressed");
@@ -69,6 +69,9 @@ public class GameStartup : MonoBehaviour {
 			}
 			if (buttons[2]) {
 				Debug.Log("Third button pressed");
+				Application.LoadLevel("CreditsScreen");
+			}
+			if (buttons[3]) {
 				Application.Quit();
 			}
 			Debug.Log(currentSelection);

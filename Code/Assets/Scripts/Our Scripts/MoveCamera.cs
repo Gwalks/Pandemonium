@@ -6,6 +6,7 @@ public class MoveCamera : MonoBehaviour {
 	// Use this for initialization
 	public float speed;
 
+	private string nextLevel = "GameOver";
 	Vector3 playerPosition;
 	Vector3 screenPos;
 
@@ -29,7 +30,8 @@ public class MoveCamera : MonoBehaviour {
 		//	Debug.Log ("player postion " + screenPos);
 
 		if (screenPos.x < 0) {
-			Debug.Log ("game over");
+			Application.LoadLevel(nextLevel);
+			//Debug.Log ("game over");
 		}
 	}
 }

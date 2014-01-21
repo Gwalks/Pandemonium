@@ -106,14 +106,42 @@ MonoBehaviour:
   - {fileID: 933623443}
   - {fileID: 803503413}
   frame1:
-  - Hi
-  - aw
-  - asd
-  - asdqwae
+  - "Dr. Friedrich Heisenberg, scientist and grandson of Werner Heisenberg, lived
+    his entire life under the oppressive shadow of his grandfather\u2019s accomplishments."
+  - Largely ignored by his peers, Friedrich sought desperately to emerge from obscurity
+    and sear his name forever into the annals of human history.
+  - 'And so, after countless years of feverish research and sleepless nights, Dr.
+    Heisenberg at last had a major breakthrough: Quantum Teleportation!'
+  - His vigor renewed, he constructed a device that would allow the near instantaneous
+    transportation of matter from one physical location to another.
+  - But there was one problem.
+  - The teleportation device would only work if the atomic configuration of the object
+    teleported was compatible with the device itself.
+  - 'And, as fate would have it, the only objects that had the proper atomic configuration
+    were not simply objects, but rather living creatures: Pandas!'
   frame2:
-  - Frame 2 1
+  - 'Although doing so went against the deepest fiber of his moral character, Dr.
+    Heisenberg obtained a live Panda through less than legal and certainly not PETA-friendly
+    means. '
+  - He had worked too long and too hard to be thwarted by such a small impediment.
+  - And thus, Dr. Heisenberg was at last on the verge of joining his grandfather as
+    one of the greatest scientists in all of human history!
+  - And yet fortune would have it that, on the verge of victory, disaster stuck.
+  - While struggling to get the poor panda into the device, Dr. Heisenberg unknowingly
+    hit the button and initiated the teleportation countdown.
+  - The doors shut behind him and the panda, and before he could even blink, bright
+    lights flashed and the teleportation device activated.
   frame3:
-  - Frame 33
+  - "In an unfortunate twist of poetic justice, Dr. Heisenberg\u2019s atoms were spliced
+    with the Panda\u2019s."
+  - 'He was transformed from a simple man into something with far more hair and far
+    less dietary variation: an anthro-panda!'
+  - In the smallest fraction of a second, the swarm of atoms that comprised the anthro-Panda
+    was flung perilously through time and space.
+  - When Dr. Heisen-Panda reassembled, he found himself in a zoo of all places, and
+    must now escape to regain his human form.
+  - 'Doing so will be no easy feat; due to the side effects of the teleportation device,
+    Dr. Heisen-Panda will teleport uncontrollably at frequent intervals. '
   temp: []
 --- !u!4 &197495746
 Transform:
@@ -184,6 +212,7 @@ GameObject:
   - 92: {fileID: 588784132}
   - 124: {fileID: 588784131}
   - 81: {fileID: 588784130}
+  - 114: {fileID: 588784137}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,6 +281,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &588784137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588784129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafbc13dd5ec5314489c8db32fd09245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToGoTo: 
 --- !u!1 &803503412
 GameObject:
   m_ObjectHideFlags: 0
